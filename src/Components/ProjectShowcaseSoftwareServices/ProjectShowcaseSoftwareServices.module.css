@@ -1,0 +1,192 @@
+/* Mobile first - 2 column layout for stats grid */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    /* padding: 0 20px; */
+    /* max-width: 400px; */
+    margin: 0 auto;
+}
+
+/* Mobile layout - matching the photo exactly */
+/* Row 1: Laptop image (full width) */
+.div5 {
+    order: 1;
+    grid-column: span 2;
+    min-height: 200px;
+}   
+
+/* Row 2: Logo PPI (full width) */
+.div2 {
+    order: 2;
+    grid-column: span 2;
+}
+
+/* Row 3: Challenge & Strategy (full width) */
+.div3 {
+    order: 3;
+    grid-column: span 2;
+}
+
+/* Row 4-7: Phone image on left (4 rows), stats stacked on right */
+.div1 {
+    order: 4;
+    grid-row: span 4;
+    min-height: 350px;
+}
+
+.div6 {
+    order: 5;
+}
+
+.div7 {
+    order: 6;
+}
+
+.div9 {
+    order: 7;
+}
+
+.div8 {
+    order: 8;
+}
+
+/* Row 6: Services Delivered (full width) */
+.div4 {
+    order: 9;
+    grid-column: span 2;
+}
+
+/* Tablet breakpoint */
+@media (min-width: 768px) {
+    .parent {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+        gap: 15px;
+    }
+
+    /* Row 1: Laptop image (full width) - same as mobile */
+    .div5 {
+        order: 1;
+        grid-column: span 2;
+        grid-row: 1;
+        min-height: 250px;
+    }
+
+    /* Row 2: Logo PPI (full width) */
+    .div2 {
+        order: 2;
+        grid-column: span 2;
+        grid-row: 2;
+    }
+
+    /* Row 3: Challenge & Strategy (full width) */
+    .div3 {
+        order: 3;
+        grid-column: span 2;
+        grid-row: 3;
+    }
+
+    /* Row 4-7: Phone image on left (4 rows), stats stacked on right */
+    .div1 {
+        order: 4;
+        grid-column: 1;
+        grid-row: 4 / span 4;
+        min-height: 350px;
+    }
+
+    .div6 {
+        order: 5;
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    .div7 {
+        order: 6;
+        grid-column: 2;
+        grid-row: 5;
+    }
+
+    .div9 {
+        order: 7;
+        grid-column: 2;
+        grid-row: 6;
+    }
+
+    .div8 {
+        order: 8;
+        grid-column: 2;
+        grid-row: 7;
+    }
+
+    /* Row 8: Services Delivered (full width) */
+    .div4 {
+        order: 9;
+        grid-column: span 2;
+        grid-row: 8;
+    }
+}
+
+/* Desktop breakpoint - original layout */
+@media (min-width: 1200px) {
+    .parent {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, auto);
+        /* max-width: 1400px; */
+        max-width: 100%;
+        gap: 20px;
+        /* padding: 0 40px; */
+    }
+
+    .div1 {
+        grid-row: span 4 / span 4;
+        grid-column-start: 1;
+        grid-row-start: 1;
+        min-height: 500px;
+    }
+
+    .div2 {
+        grid-column-start: 2;
+        grid-row-start: 1;
+    }
+
+    .div3 {
+        grid-row: span 2 / span 2;
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
+
+    .div4 {
+        grid-column-start: 2;
+        grid-row-start: 4;
+    }
+
+    .div5 {
+        grid-column: span 2 / span 2;
+        grid-row: span 2 / span 2;
+        grid-column-start: 3;
+        grid-row-start: 1;
+        min-height: unset;
+    }
+
+    .div6 {
+        grid-column-start: 3;
+        grid-row-start: 3;
+    }
+
+    .div7 {
+        grid-column-start: 4;
+        grid-row-start: 3;
+    }
+
+    .div8 {
+        grid-column-start: 3;
+        grid-row-start: 4;
+    }
+
+    .div9 {
+        grid-column-start: 4;
+        grid-row-start: 4;
+    }
+}
+        

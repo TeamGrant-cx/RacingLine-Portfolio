@@ -1,0 +1,232 @@
+/* Contact Cards Container */
+.contactCardsContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+@media (min-width: 768px) {
+    .contactCardsContainer {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Card Styles */
+.card {
+    background: #04080E;
+    border-radius: 2rem;
+    padding: 2rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 640px) {
+    .card {
+        padding: 2.5rem 2rem;
+    }
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 2rem;
+    padding: 3px;
+    background: rgba(203, 163, 86, 0.4);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+/* Card Title */
+.cardTitle {
+    font-family: var(--font-playfair);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #CBA356;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .cardTitle {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Form Styles */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.form input,
+.form textarea {
+    background-color: #0d1a2d;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.875rem 1.25rem;
+    border-radius: 1.5rem;
+    color: white;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    width: 100%;
+}
+
+.form input:focus,
+.form textarea:focus {
+    outline: none;
+    border-color: rgba(203, 163, 86, 0.5);
+    background-color: #0f1e33;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    color: #6b7280;
+}
+
+.form textarea {
+    resize: none;
+    min-height: 100px;
+}
+
+/* File Upload */
+.fileUpload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    margin-top: 0.5rem;
+    border: 2px dashed #0891b2;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.fileUpload:hover {
+    border-color: #06b6d4;
+    background-color: rgba(8, 145, 178, 0.05);
+}
+
+.fileUploadText {
+    color: #0891b2;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.fileUploadIcon {
+    color: #0891b2;
+    margin-right: 0.5rem;
+}
+
+/* Submit Button */
+.submitButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #4a4a4a;
+    border-radius: 3rem;
+    padding: 0.75rem 2rem;
+    margin: 1.5rem auto 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.submitButton:hover {
+    border-color: #CBA356;
+    background-color: rgba(203, 163, 86, 0.1);
+}
+
+.submitButton i {
+    color: #CBA356;
+}
+
+/* Get in Touch Section */
+.getInTouchDescription {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 400px;
+    margin: 0 auto 2rem;
+}
+
+/* Office Info */
+.officeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.officeCard {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.5rem 0;
+}
+
+.flagContainer {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 640px) {
+    .flagContainer {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+.officeInfo {
+    flex: 1;
+}
+
+.officeTitle {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.officeAddress {
+    color: white;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+}
+
+.officeLabel {
+    color: white;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.officeContact {
+    color: white;
+    font-size: 0.85rem;
+    margin-top: 0.125rem;
+}
+
+/* Divider */
+.divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    margin: 0.5rem 0;
+}

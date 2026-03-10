@@ -1,0 +1,246 @@
+.borderLine{
+    width: 260px;
+    height: 1px;
+    top: 14%;
+    left: -2%;
+    background-color: white;
+    position: absolute;
+    display: block;
+}
+
+.borderLine2{
+    width: 1px;
+    height: 140px;
+    top: 10%;
+    left: 0%;
+    background-color: white;
+    position: absolute;
+    display: block;
+}
+
+.borderLine3{
+    width: 260px;
+    height: 1px;
+    bottom: 14%;
+    right: -2%;
+    background-color: white;
+    position: absolute;
+    display: block;
+}
+
+.borderLine4{
+    width: 1px;
+    height: 140px;
+    bottom: 10%;
+    right: 0%;
+    background-color: white;
+    position: absolute;
+    display: block;
+}
+
+/* Extra Small Mobile - 0px to 374px (iPhone SE, small phones) */
+@media (max-width: 374px) {
+    .borderLine{
+        top: 6%;
+        left: 2%;
+    }
+    
+    .borderLine2{
+        top: 3%;
+        left: 4%;
+    }
+    
+    .borderLine3{
+        bottom: 4%;
+        right: 2%;
+    }
+    
+    .borderLine4{
+        bottom: 2%;
+        right: 5.5%;
+    }
+}
+
+/* Small Mobile - 375px to 413px (iPhone 6/7/8, iPhone X/11 Pro) */
+@media (min-width: 375px) and (max-width: 413px) {
+    .borderLine{
+        top: 5%;
+        left: 1%;
+    }
+
+    .borderLine2{
+        top: 2%;
+        left: 3.8%;
+    }
+
+    .borderLine3{
+        bottom: 3%;
+        right: 1%;
+    }
+
+    .borderLine4{
+        bottom: 1%;
+        right: 5%;
+    }
+}
+
+/* Medium Mobile - 414px to 479px (iPhone XR, iPhone 11, iPhone Plus models) */
+@media (min-width: 414px) and (max-width: 479px) {
+    .borderLine{
+        top: 5.5%;
+        left: 0.5%;
+    }
+    
+    .borderLine2{
+        top: 2.5%;
+        left: 3.5%;
+    }
+    
+    .borderLine3{
+        bottom: 3.5%;
+        right: 0.5%;
+    }
+    
+    .borderLine4{
+        bottom: 1.5%;
+        right: 4.5%;
+    }
+}
+
+/* Large Mobile - 480px to 639px */
+@media (min-width: 480px) and (max-width: 639px) {
+    .borderLine{
+        top: 6%;
+        left: 1%;
+    }
+    
+    .borderLine2{
+        top: 3%;
+        left: 2.5%;
+    }
+    
+    .borderLine3{
+        bottom: 4%;
+        right: 1%;
+    }
+    
+    .borderLine4{
+        bottom: 2%;
+        right: 2.5%;
+    }
+}
+
+/* Small Tablet / Phablet (sm) - 640px to 767px */
+@media (min-width: 640px) and (max-width: 767px) {
+    .borderLine{
+        top: 7%;
+        left: -1%;
+    }
+    
+    .borderLine2{
+        top: 4%;
+        left: 1.5%;
+    }
+    
+    .borderLine3{
+        bottom: 5%;
+        right: -1%;
+    }
+    
+    .borderLine4{
+        bottom: 3%;
+        right: 2.5%;
+    }
+}
+
+/* Tablet (md) - 768px to 1023px (iPad portrait) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .borderLine{
+        top: 9%;
+        left: 1%;
+    }
+    
+    .borderLine2{
+        top: 6%;
+        left: 2.5%;
+    }
+    
+    .borderLine3{
+        bottom: 7%;
+        right: 1%;
+    }
+    
+    .borderLine4{
+        bottom: 5%;
+        right: 2.5%;
+    }
+}
+
+/* Large Tablet (lg) - 1024px to 1279px (iPad landscape, small laptops) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .borderLine{
+        top: 12%;
+        left: 1%;
+    }
+    
+    .borderLine2{
+        top: 8%;
+        left: 2.5%;
+    }
+    
+    .borderLine3{
+        bottom: 10%;
+        right: 1%;
+    }
+    
+    .borderLine4{
+        bottom: 7%;
+        right: 2.5%;
+    }
+}
+
+/* Desktop (xl) - 1280px to 1535px */
+@media (min-width: 1280px) and (max-width: 1535px) {
+    .borderLine{
+        top: 13%;
+        left: 1%;
+    }
+    
+    .borderLine2{
+        top: 9%;
+        left: 2.5%;
+    }
+    
+    .borderLine3{
+        bottom: 12%;
+        right: 1%;
+    }
+    
+    .borderLine4{
+        bottom: 9%;
+        right: 2.5%;
+    }
+}
+
+/* Large Desktop (2xl) - 1536px and up */
+@media (min-width: 1536px) {
+    .borderLine{
+        top: 14%;
+        left: -2%;
+    }
+    
+    .borderLine2{
+        top: 10%;
+        left: 0%;
+    }
+    
+    .borderLine3{
+        bottom: 14%;
+        right: -2%;
+    }
+    
+    .borderLine4{
+        bottom: 10%;
+        right: 0%;
+    }
+}

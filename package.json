@@ -1,0 +1,33 @@
+{
+  "name": "grantportfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "@payloadcms/db-mongodb": "^3.78.0",
+    "@payloadcms/next": "^3.78.0",
+    "@payloadcms/richtext-lexical": "^3.78.0",
+    "@payloadcms/storage-vercel-blob": "^3.78.0",
+    "@payloadcms/ui": "^3.78.0",
+    "axios": "^1.13.6",
+    "lottie-react": "^2.4.1",
+    "next": "15.4",
+    "nodemailer": "^8.0.1",
+    "payload": "^3.78.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.1",
+    "tailwindcss": "^4"
+  }
+}

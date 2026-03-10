@@ -1,0 +1,113 @@
+/* globals.css */
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #CA9343;
+  --color-background: #ffffff;
+  --color-foreground: #04080E;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #04080E;
+  --primary: #CA9343;
+  --primary: #CA9343;
+  --primary: #CA9343;
+  --primary: #CA9343;
+}
+
+.border-gradient-color {
+  position: relative;
+  border-radius: 3.125rem;
+}
+
+.border-gradient-color::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 0.125rem; /* border width */
+  border-radius: 3.125rem;
+  background: linear-gradient(98.18deg, #CA9343 0%, rgba(1, 69, 116, 0.7) 100.01%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.border-gradient-color.rounded-20 {
+  border-radius: 20px;
+}
+.border-gradient-color.rounded-20::before {
+  border-radius: 20px;
+}
+
+/* Card variant with 1rem border radius */
+.border-gradient-card {
+  position: relative;
+  border-radius: 1rem;
+}
+
+.border-gradient-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 0.0625rem; /* thinner border for cards */
+  border-radius: 1.25rem;
+  background: linear-gradient(98.18deg, #CA9343 0%, rgba(1, 69, 116, 0.7) 100.01%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+body {
+  background-image: url('/bg.jpg');
+  background-size: cover;
+  /* background-attachment: fixed;
+  background-position: center; */
+  background-repeat: no-repeat;
+
+  overflow-x: hidden;
+  
+}
+
+.navbarLinks{
+  font-size: 1rem;
+}
+
+h1{
+   font-family: var(--font-k2d);
+}
+
+h2, h3, h4, h5, h6, a, p, span, div, button {
+  font-family: var(--font-ubuntu);
+}
+
+
+.FontK2d {
+  font-family: var(--font-k2d);
+}
+.FontUbuntu {
+  font-family: var(--font-ubuntu);
+}
+
+
+/* Hide scrollbar utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera */
+}
