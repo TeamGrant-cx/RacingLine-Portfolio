@@ -1,22 +1,20 @@
 .gradient-border {
-  border: 0.125rem solid transparent;
-  background: linear-gradient(#0D1B2A, #0D1B2A) padding-box,
-              linear-gradient(98.18deg, #CA9343 0%, rgba(1, 69, 116, 0.7) 100.01%) border-box;
-  border-radius: 3.125rem;
-border-width: 0.125rem;
-padding-top: 0.563rem;
-padding-right: 1.063rem;
-padding-bottom: 0.563rem;
-padding-left: 1.813rem;
 
+}
+.navbarLinks {
+  font-size: 1rem;
+  
+}
 
-}   
-
+.navbarLinks:active {
+  border: 0.125rem solid #77BD74;
+  
+}
 .navParent {
-gap: 1.5rem;
-opacity: 1;
-padding-top: 1.25rem;
-padding-bottom: 1.25rem;
-/* padding-right: 2.5rem;
+  gap: 1.5rem;
+  opacity: 1;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  /* padding-right: 2.5rem;
 padding-left: 2.5rem; */
 }

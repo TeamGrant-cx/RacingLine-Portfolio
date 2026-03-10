@@ -8,12 +8,10 @@
 }
 
 :root {
-  --background: #ffffff;
+  --background: #03031D;
   --foreground: #04080E;
   --primary: #CA9343;
-  --primary: #CA9343;
-  --primary: #CA9343;
-  --primary: #CA9343;
+
 }
 
 .border-gradient-color {
@@ -25,7 +23,8 @@
   content: '';
   position: absolute;
   inset: 0;
-  padding: 0.125rem; /* border width */
+  padding: 0.125rem;
+  /* border width */
   border-radius: 3.125rem;
   background: linear-gradient(98.18deg, #CA9343 0%, rgba(1, 69, 116, 0.7) 100.01%);
   -webkit-mask:
@@ -42,6 +41,7 @@
 .border-gradient-color.rounded-20 {
   border-radius: 20px;
 }
+
 .border-gradient-color.rounded-20::before {
   border-radius: 20px;
 }
@@ -56,7 +56,8 @@
   content: '';
   position: absolute;
   inset: 0;
-  padding: 0.0625rem; /* thinner border for cards */
+  padding: 0.0625rem;
+  /* thinner border for cards */
   border-radius: 1.25rem;
   background: linear-gradient(98.18deg, #CA9343 0%, rgba(1, 69, 116, 0.7) 100.01%);
   -webkit-mask:
@@ -78,36 +79,55 @@ body {
   background-repeat: no-repeat;
 
   overflow-x: hidden;
-  
+
 }
 
-.navbarLinks{
-  font-size: 1rem;
+/* iOS Glass CSS fallback (used for mobile menu, or where WebGL isn't available).
+   Desktop dropdowns use the WebGL LensGlass component for real refraction. */
+.ios-glass {
+  backdrop-filter: blur(20px) saturate(190%) brightness(1.05);
+  -webkit-backdrop-filter: blur(20px) saturate(190%) brightness(1.05);
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
 }
 
-h1{
-   font-family: var(--font-k2d);
-}
-
-h2, h3, h4, h5, h6, a, p, span, div, button {
-  font-family: var(--font-ubuntu);
-}
 
 
-.FontK2d {
-  font-family: var(--font-k2d);
+
+
+h1
+,h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+div,
+button {
+  font-family: var(--font-montserrat);
 }
-.FontUbuntu {
-  font-family: var(--font-ubuntu);
+
+
+
+.FontMontserrat {
+  font-family: var(--font-montserrat);
 }
 
 
 /* Hide scrollbar utility */
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;  /* Chrome, Safari, Opera */
+  display: none;
+  /* Chrome, Safari, Opera */
 }
