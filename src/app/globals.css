@@ -9,6 +9,7 @@
 
 :root {
   --background: #03031D;
+  --borderColor:"rgba(119, 189, 116, 1)";
   --foreground: #04080E;
   --primary: #CA9343;
 
@@ -18,17 +19,16 @@
 /* test to push */
 .border-gradient-color {
   position: relative;
-  border-radius: 3.125rem;
+  border-radius: 1.25rem;
 }
 
 .border-gradient-color::before {
   content: '';
   position: absolute;
   inset: 0;
-  padding: 0.125rem;
-  /* border width */
-  border-radius: 3.125rem;
-  background: linear-gradient(98.18deg, #CA9343 0%, rgba(1, 69, 116, 0.7) 100.01%);
+  padding: 0.1875rem;
+  border-radius: inherit;
+  background: linear-gradient(143.9deg, #6ECCF7 0%, #A7F5A3 100%);
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -38,6 +38,52 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.border-gradient-color {
+  box-shadow:
+    /* White inner glow (like NeonText white core) */
+    0 0 5px rgba(255, 255, 255, 0.4),
+    0 0 10px rgba(255, 255, 255, 0.2),
+    /* Colored outer glow */
+    0 0 20px rgba(110, 204, 247, 0.4),
+    0 0 40px rgba(110, 204, 247, 0.2),
+    0 0 80px rgba(167, 245, 163, 0.15),
+    /* Inset white glow */
+    inset 0 0 5px rgba(255, 255, 255, 0.15),
+    inset 0 0 15px rgba(110, 204, 247, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.border-gradient-color:hover {
+  box-shadow:
+    /* Brighter white core on hover */
+    0 0 7px rgba(255, 255, 255, 0.6),
+    0 0 15px rgba(255, 255, 255, 0.3),
+    /* Brighter colored glow */
+    0 0 25px rgba(207, 238, 252, 0.5),
+    0 0 50px rgba(207, 238, 252, 0.3),
+    0 0 100px rgba(211, 250, 209, 0.2),
+    /* Inset glow */
+    inset 0 0 8px rgba(255, 255, 255, 0.2),
+    inset 0 0 20px rgba(207, 238, 252, 0.15);
+}
+
+.border-gradient-color:hover::before {
+  background: linear-gradient(143.9deg, #D3FAD1 0%, #CFEEFC 100%);
+  transform: scale(1.05);
+}
+
+.arrow-icon-glow {
+  color: rgba(120, 189, 117, 1);
+  filter: drop-shadow(0 0 6px rgba(120, 189, 117, 0.6)) drop-shadow(0 0 14px rgba(120, 189, 117, 0.3));
+  transition: color 0.3s ease, filter 0.3s ease;
+}
+
+.group:hover .arrow-icon-glow {
+  color: rgba(0, 142, 255, 1);
+  filter: drop-shadow(0 0 6px rgba(0, 142, 255, 0.6)) drop-shadow(0 0 14px rgba(0, 142, 255, 0.3));
 }
 
 .border-gradient-color.rounded-20 {

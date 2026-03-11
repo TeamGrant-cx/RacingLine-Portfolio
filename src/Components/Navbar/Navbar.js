@@ -22,12 +22,12 @@ export default function Navbar({ navItems = [], logo }) {
   }, []);
 
   const handleMouseEnter = (label) => {
-    if (timeoutRef.current) 
+    if (timeoutRef.current)
       clearTimeout(timeoutRef.current);
     setActiveDropdown(label);
   };
   const handleMouseLeave = () => {
-    // timeoutRef.current = setTimeout(() => setActiveDropdown(null), 600);
+    timeoutRef.current = setTimeout(() => setActiveDropdown(null), 600);
   };
   const toggleMobileDropdown = (label) =>
     setActiveDropdownMobile(activeDropdownMobile === label ? null : label);
@@ -86,7 +86,9 @@ export default function Navbar({ navItems = [], logo }) {
                 {item?.dropdown?.length > 0 && (
                   <LensGlass
                     visible={activeDropdown === item.label}
-                    width={288}
+                    width={293}
+                    border="2px solid rgba(119, 189, 116, 1)"
+                    borderRadius="20px"
                     style={{
                       position: "absolute",
                       top: "calc(100% + 10px)",
@@ -96,7 +98,7 @@ export default function Navbar({ navItems = [], logo }) {
                     onMouseEnter={() => handleMouseEnter(item.label)}
                     onMouseLeave={handleMouseLeave}
                   >
-                    <div style={{ padding: "8px 0" }}>
+                    <div style={{ padding: "8px 15px" }}>
                       {item.dropdown.map((subItem, index) => (
                         <div key={subItem.label}>
                           <Link
