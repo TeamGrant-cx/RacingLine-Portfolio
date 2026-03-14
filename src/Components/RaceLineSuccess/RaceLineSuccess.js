@@ -66,18 +66,7 @@ export default function RaceLineSuccess({ data }) {
         </div>
       </div>
 
-      {/* width: 110.00090089328336;
-height: 66.00090064339393;
-padding-top: 8px;
-padding-right: 30px;
-padding-bottom: 8px;
-padding-left: 30px;
-gap: 10px;
-angle: -8.78 deg;
-opacity: 1;
-top: 30.37px;
-left: 157.01px;
-border-radius: 50px; */}
+   
 
       <div className="grid grid-cols-3 gap-10">
         <div className="bg--500 flex flex-col justify-center items-center relative group">
