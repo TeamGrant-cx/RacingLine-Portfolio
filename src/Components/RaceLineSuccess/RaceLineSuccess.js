@@ -14,12 +14,12 @@ export default function RaceLineSuccess({ data }) {
         <div className="py-5 group flex justify-center items-center gap-3 relative pb-2">
           <i
             className="fa-solid fa-angle-right text-[1.8rem] text-[#77BD74] 
-       transition-transform duration-300 
+       transition-transform duration-500 
        group-hover:scale-y-[-1]"
           ></i>
           <p
             className="text-[1.5rem] text-[#C9CACF] 
-       transition-transform duration-300 
+       transition-transform duration-500 
        group-hover:translate-x-1"
           >
             Full-service marketing without fragmented execution
@@ -30,12 +30,12 @@ export default function RaceLineSuccess({ data }) {
         <div className="py-5 group flex justify-center items-center gap-3 relative pb-2">
           <i
             className="fa-solid fa-angle-right text-[1.8rem] text-[#77BD74] 
-       transition-transform duration-300 
+       transition-transform duration-500 
        group-hover:scale-y-[-1]"
           ></i>
           <p
             className="text-[1.5rem] text-[#C9CACF] 
-       transition-transform duration-300 
+       transition-transform duration-500 
        group-hover:translate-x-1"
           >
             High-impact event execution with precision and control
@@ -46,12 +46,12 @@ export default function RaceLineSuccess({ data }) {
         <div className="py-5 group flex justify-center items-center gap-3">
           <i
             className="fa-solid fa-angle-right text-[1.8rem] text-[#77BD74] 
-       transition-transform duration-300 
+       transition-transform duration-500 
        group-hover:scale-y-[-1]"
           ></i>
           <p
             className="text-[1.5rem] text-[#C9CACF] 
-       transition-transform duration-300 
+       transition-transform duration-500 
        group-hover:translate-x-1"
           >
             Performance-focused strategies built for measurable growth
