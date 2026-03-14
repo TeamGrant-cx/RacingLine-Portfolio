@@ -10,12 +10,35 @@
 :root {
   --background: #03031D;
   --borderColor:"rgba(119, 189, 116, 1)";
+  
   --foreground: #04080E;
   --primary: #CA9343;
 
 }
 
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+div,
+button {
+  font-family: var(--font-montserrat);
+}
+
+
+
+.FontMontserrat {
+  font-family: var(--font-montserrat);
+}
+.PlayFair {
+  font-family: var(--font-playfair);
+}
 /* test to push */
 .border-gradient-color {
   position: relative;
@@ -145,26 +168,6 @@ body {
 
 
 
-
-h1
-,h2,
-h3,
-h4,
-h5,
-h6,
-a,
-p,
-span,
-div,
-button {
-  font-family: var(--font-montserrat);
-}
-
-
-
-.FontMontserrat {
-  font-family: var(--font-montserrat);
-}
 
 
 /* Hide scrollbar utility */

@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import "@/Components/HeroSection/HeroSection.css";
 import CardCategory from "../CardCategory/CardCategory";
+import ScrollingLogos from "./ScrollingLogos";
 
 const NeonHighlight = ({ text }) => (
   <span className="neon-stack" aria-label={text}>
@@ -29,7 +30,7 @@ export default function HeroSection({ HeroData, ClientLogos }) {
               <br />
               <NeonHighlight text="Fastest Line to Growth" />
             </h1>
-            <p>Racing Line helps brands compete, adapt, and win in fast-moving markets.</p>
+            <p className="text-[#D7D8DB] font-[400] text-[1.5rem]">Racing Line helps brands compete, adapt, and win in fast-moving markets.</p>
           </div>
 
           <div className="grid grid-cols-4 gap-2 mt-5">
@@ -51,13 +52,7 @@ export default function HeroSection({ HeroData, ClientLogos }) {
         </div>
       </div>
 
-      <div className="mt-5 h-[99px] rounded-[50px] flex items-center justify-between px-[3%] overflow-hidden">
-        {ClientLogos?.map((img, i) => (
-          <div key={i} className="h-full flex items-center flex-1 min-w-0">
-            <Image src={img.logo?.url} alt={`design-${i}`} width={200} height={99} className="h-full w-full object-contain" />
-          </div>
-        ))}
-      </div>
+      {/* <ScrollingLogos logos={ClientLogos} /> */}
     </>
   );
 }

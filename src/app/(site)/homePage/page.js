@@ -1,7 +1,7 @@
 import ClientsTeaServer from '@/Components/ClientsTea/ClientsTeaServer'
 import HeroSection from '@/Components/HeroSection/HeroSection'
-import HowWeWork from '@/Components/HowWeWork/HowWeWork'
 import OurServicesServer from '@/Components/OurServices/OurServicesServer'
+import RaceLineSuccess from '@/Components/RaceLineSuccess/RaceLineSuccess';
 import React from 'react'
 
 async function getHomePageData() {
@@ -19,14 +19,14 @@ export default async function HomePage() {
     
   const HeroData = data?.hero ?? {};
   const ClientLogos = data?.clientLogos ?? [];
-  const HowWeWorkData = data?.howWeWork ?? {};
+  const RaceLineSuccessData = data?.raceLineSuccess ?? {};
   const ClientsTea = data?.clientsTea ?? {};
 
   return (
     <>
       <div className=''>
         <HeroSection HeroData={HeroData} ClientLogos={ClientLogos} />
-        <HowWeWork data={HowWeWorkData} />
+        <RaceLineSuccess data={RaceLineSuccessData} />
         <OurServicesServer />
       </div>
       <ClientsTeaServer data={ClientsTea} />

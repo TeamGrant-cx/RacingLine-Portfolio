@@ -1,0 +1,29 @@
+/* .scrolling-logos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.scrolling-logos-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: scrollLogos 20s linear infinite;
+}
+
+.scrolling-logos-track .logo-item {
+  flex-shrink: 0;
+  height: 99px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+} */
