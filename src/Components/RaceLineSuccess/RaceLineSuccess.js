@@ -66,8 +66,10 @@ export default function RaceLineSuccess({ data }) {
       </div>
 
       <div className="grid grid-cols-3 gap-10">
+        {/* First Div */}
+
         <div className="bg--500 flex flex-col justify-center items-center relative group">
-          <div className="bg-[#6ECCF7] absolute transition-all duration-300 ease-in-out group-hover:top-15 group-hover:left-28 rounded-[50px] w-[110px] h-[66px] py-[8px] px-[30px] rotate-[8.78deg] top-[5%] left-[157.01px] z-10">
+          <div className="bg-[#6ECCF7] absolute transition-all duration-300 ease-in-out group-hover:top-15 group-hover:left-28 rounded-[50px] w-[110px] h-[66px] py-[8px] px-[30px] rotate-[8.78deg] -top-[2%] left-[157.01px] z-10">
             <Image
               src="/RaceLineSuccess/Vector.png"
               alt="Avatar"
@@ -76,7 +78,8 @@ export default function RaceLineSuccess({ data }) {
             />
           </div>
 
-          <div className={`ButtonStyle absolute transition-all duration-300 ease-in-out group-hover:top-15 group-hover:right-28 -rotate-[8.78deg] top-[5%] right-[150px] flex justify-around   rounded-full px-5 py-3 text-white z-30`}
+          <div
+            className={`ButtonStyle absolute transition-all duration-300 ease-in-out group-hover:top-15 group-hover:right-28 -rotate-[8.78deg] top-[0%] right-[180px] flex justify-around   rounded-full px-5 py-3 text-white z-30`}
           >
             <div className="mx-2 ">
               <p className="text-[2rem] font-[700] leading-none">10</p>
@@ -93,19 +96,64 @@ export default function RaceLineSuccess({ data }) {
           </p>
         </div>
 
-        <div className="bg--400 flex justify-center items-center">
-          <button
-            className={`bg-neutral-400/20 text-neutral-300 backdrop-blur-[1px] border border-neutral-400/20  rounded-full px-3 py-3`}
+        {/* Second Div */}
+        <div className="bg--500 flex flex-col justify-center items-center relative group">
+          <div className="bg-[#6ECCF7] absolute transition-all duration-300 ease-in-out group-hover:top-15 group-hover:right-28 rounded-[50px] w-[110px] h-[66px] py-[8px] px-[30px] -rotate-[8.78deg] -top-[20%] right-[160px] z-10 flex justify-center items-center">
+            <Image
+              src="/RaceLineSuccess/amazon.png"
+              alt="Avatar"
+              width={250}
+              height={250}
+            />
+          </div>
+          <div className="bg-white absolute transition-all duration-300 ease-in-out group-hover:top-15 group-hover:right-28 rounded-[50px] w-[110px] h-[66px] py-[8px] px-[30px] -rotate-[8.78deg] -top-[2%] right-[250px] z-10 flex justify-center items-center">
+            <Image
+              src="/RaceLineSuccess/ArabBank.png"
+              alt="Avatar"
+              width={250}
+              height={250}
+            />
+          </div>
+
+          <div
+            className={`ButtonStyle absolute transition-all duration-300 ease-in-out group-hover:top-15 group-hover:left-28 rotate-[8.78deg] top-[0%] left-[180px] flex justify-around   rounded-full px-5 py-3 text-white z-30 `}
           >
-            Request a quotation
-          </button>
+            <p className="text-[0.85rem] font-[500]">Leading Brands</p>
+          </div>
+
+          <p className="text-[9.5rem] font-[600] text-[#C8C9D0] z-20">100+</p>
+          <p className="text-[1.5rem] font-[400] text-[#C8C9D0] z-20">
+            Brands Partnered With
+          </p>
         </div>
 
-        <div className="bg-red-500">
-          <h2>ok</h2>
-        </div>
-        <div className="bg-red-500">
-          <h2>ok</h2>
+        {/* Third Div */}
+        <div className="bg--500 flex flex-col justify-center items-center relative group">
+          <div className="bg-[#6ECCF7] absolute transition-all duration-300 ease-in-out group-hover:top-15 group-hover:left-28 rounded-[50px] w-[110px] h-[66px] py-[8px] px-[30px] rotate-[8.78deg] -top-[2%] left-[157.01px] z-10">
+            <Image
+              src="/RaceLineSuccess/Vector.png"
+              alt="Avatar"
+              width={50}
+              height={50}
+            />
+          </div>
+
+          <div
+            className={`ButtonStyle absolute transition-all duration-300 ease-in-out group-hover:top-15 group-hover:right-28 -rotate-[8.78deg] top-[0%] right-[180px] flex justify-around   rounded-full px-5 py-3 text-white z-30`}
+          >
+            <div className="mx-2 ">
+              <p className="text-[2rem] font-[700] leading-none">10</p>
+            </div>
+            <div className="flex flex-col leading-tight mx-2 ">
+              <p className="text-[0.85rem] font-[500]">Served</p>
+              <p className="text-[0.85rem] font-[500]">Markets</p>
+            </div>
+          </div>
+
+          <p className="text-[9.5rem] font-[600] text-[#C8C9D0] z-20">7</p>
+          <p className="text-[1.5rem] font-[400] text-[#C8C9D0] z-20">
+            in house Core Marketing services{" "}
+          </p>
         </div>
       </div>
     </>

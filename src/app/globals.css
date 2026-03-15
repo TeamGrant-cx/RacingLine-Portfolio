@@ -190,7 +190,7 @@ body {
   -webkit-backdrop-filter: blur(1.5px);
   backdrop-filter: blur(1.5px);
   border: none;
-  border-radius: 150px;
+  /* border-radius: 150px; */
   box-shadow:
     0 0 8px rgba(110, 204, 247, 0.6),
     0 0 20px rgba(110, 204, 247, 0.3),
@@ -201,7 +201,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 150px;
+  border-radius: inherit;
   padding: 2px;
   background: linear-gradient(
     to right,
