@@ -6,7 +6,7 @@ import LensGlass from "../Lensglass/Lensglass";
 export default function RaceLineSuccess({ data }) {
   return (
     <>
-      <div className="grid grid-cols-2 gap-10 py-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-20">
         <div
           className={`${styles.BarStyle} font-[600] text-[2.5rem] text-white self-start`}
         >
@@ -66,19 +66,16 @@ export default function RaceLineSuccess({ data }) {
         </div>
       </div>
 
-   
-
       <div className="grid grid-cols-3 gap-10">
         <div className="bg--500 flex flex-col justify-center items-center relative group">
-          <div
-            className="bg-[#6ECCF7] absolute transition-all duration-300 ease-in-out 
-  group-hover:-top-5 group-hover:left-28
+          <div className="bg-[#6ECCF7] absolute transition-all duration-300 ease-in-out 
+  group-hover:top-15 group-hover:left-28
   rounded-[50px] 
   w-[110px] h-[66px] 
   py-[8px] px-[30px] 
 
   rotate-[8.78deg]
-  -top-[30.37px] left-[157.01px]"
+  top-[10%] left-[157.01px]"
           >
             <Image
               src="/RaceLineSuccess/Vector.png"
@@ -88,25 +85,30 @@ export default function RaceLineSuccess({ data }) {
             />
           </div>
 
-          <LensGlass
-            borderRadius="50px"
-            width={110}
-            height={66}
-            className="absolute transition-all duration-300 ease-in-out
-              group-hover:-top-5 group-hover:-left-[80px]
-              rotate-[-8.78deg]
-              -top-[150.37px] -left-[120px]"
-          >
-            <div className="flex justify-between py-[8px] px-[30px] text-white">
-              <p>10</p>
-              <p>served markets</p>
+          <div className="absloute flex justify-around bg-neutral-400/20 text-neutral-300 backdrop-blur-[1px] border border-neutral-400/20  rounded-full px-5 py-3 text-white">
+            <div className="mx-2 ">
+              <p className="text-[2rem] font-[700] leading-none">10</p>
             </div>
-          </LensGlass>
+            <div className="flex flex-col leading-tight mx-2 ">
+              <p className="text-[0.85rem] font-[500]">Served</p>
+              <p className="text-[0.85rem] font-[500]">Markets</p>
+            </div>
+          </div>
+
           <p className="text-[9.5rem] font-[600] text-[#C8C9D0]">25+</p>
           <p className="text-[1.5rem] font-[400] text-[#C8C9D0]">
             Years of Marketing Expertise
           </p>
         </div>
+
+        <div className="bg--400 flex justify-center items-center">
+          <button
+            className={`bg-neutral-400/20 text-neutral-300 backdrop-blur-[1px] border border-neutral-400/20  rounded-full px-3 py-3`}
+          >
+            Request a quotation
+          </button>
+        </div>
+
         <div className="bg-red-500">
           <h2>ok</h2>
         </div>
