@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import styles from "./RaceLineSuccess.module.css";
-import LensGlass from "../Lensglass/Lensglass";
 
 export default function RaceLineSuccess({ data }) {
   return (
@@ -68,15 +67,7 @@ export default function RaceLineSuccess({ data }) {
 
       <div className="grid grid-cols-3 gap-10">
         <div className="bg--500 flex flex-col justify-center items-center relative group">
-          <div className="bg-[#6ECCF7] absolute transition-all duration-300 ease-in-out 
-  group-hover:top-15 group-hover:left-28
-  rounded-[50px] 
-  w-[110px] h-[66px] 
-  py-[8px] px-[30px] 
-
-  rotate-[8.78deg]
-  top-[10%] left-[157.01px]"
-          >
+          <div className="bg-[#6ECCF7] absolute transition-all duration-300 ease-in-out group-hover:top-15 group-hover:left-28 rounded-[50px] w-[110px] h-[66px] py-[8px] px-[30px] rotate-[8.78deg] top-[5%] left-[157.01px] z-10">
             <Image
               src="/RaceLineSuccess/Vector.png"
               alt="Avatar"
@@ -85,7 +76,8 @@ export default function RaceLineSuccess({ data }) {
             />
           </div>
 
-          <div className="absloute flex justify-around bg-neutral-400/20 text-neutral-300 backdrop-blur-[1px] border border-neutral-400/20  rounded-full px-5 py-3 text-white">
+          <div className={`ButtonStyle absolute transition-all duration-300 ease-in-out group-hover:top-15 group-hover:right-28 -rotate-[8.78deg] top-[5%] right-[150px] flex justify-around   rounded-full px-5 py-3 text-white z-30`}
+          >
             <div className="mx-2 ">
               <p className="text-[2rem] font-[700] leading-none">10</p>
             </div>
@@ -95,8 +87,8 @@ export default function RaceLineSuccess({ data }) {
             </div>
           </div>
 
-          <p className="text-[9.5rem] font-[600] text-[#C8C9D0]">25+</p>
-          <p className="text-[1.5rem] font-[400] text-[#C8C9D0]">
+          <p className="text-[9.5rem] font-[600] text-[#C8C9D0] z-20">25+</p>
+          <p className="text-[1.5rem] font-[400] text-[#C8C9D0] z-20">
             Years of Marketing Expertise
           </p>
         </div>
