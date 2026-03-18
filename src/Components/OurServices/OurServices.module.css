@@ -79,4 +79,54 @@
   }
 }
 
+/* Horizontal bar under text + downward glow */
+.BarStyleH {
+  position: relative;
+  padding-bottom: 2rem;
+  overflow: visible;
+}
+
+.BarStyleH::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 60%;
+  background: white;
+  border-radius: 2px;
+  box-shadow:
+    0 0 6px  rgba(110, 204, 247, 1),
+    0 0 20px rgba(0,   143, 255, 0.7),
+    0 0 50px rgba(0,   142, 255, 0.4);
+  z-index: 2;
+}
+
+.GlowConeDown {
+  position: absolute;
+  bottom: -86px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150%;
+  height: 90px;
+
+  clip-path: polygon(
+    30%  0%,
+    70%  0%,
+    80%  100%,
+    20%  100%
+  );
+
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(110, 204, 247, 0.45)   0%,
+    rgba(0, 143, 255, 0.2)     35%,
+    rgba(0, 142, 255, 0.08)    65%,
+    transparent                100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
 /* Gradient border that doesn't affect background */

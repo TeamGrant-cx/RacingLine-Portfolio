@@ -1,61 +1,36 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import CardService from "../CardService/CardService";
+import styles from "./OurServices.module.css";
 
 export default function OurServices({ display = true, services = [] }) {
   return (
     <div className="mb-[5rem]">
       {display && (
-        <h1 className="text-center text-primary uppercase font-[700] text-2xl md:text-3xl lg:text-[2.25rem] mt-8 md:mt-12 lg:mt-[3.125rem] mb-6 md:mb-8 lg:mb-[1.875rem]">
-          Our Services
-        </h1>
+        <div className={`${styles.BarStyleH} text-white text-center font-[600] text-2xl md:text-3xl lg:text-[2.5rem] mt-8 md:mt-12 lg:mt-[3.125rem] mb-6 md:mb-8 lg:mb-[1.875rem]`}>
+          <div className={styles.GlowConeDown} />
+          <p>
+            Explore Our
+            <span className="PlayFair italic mx-5 font-[500]">
+              Full Services
+            </span>
+            That Drive Your Brand&#39;s Performance
+          </p>
+        </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-3 md:gap-[20px]">
+      <div className="grid grid-cols-4 gap-3 md:gap-[20px]">
         {services.map((service) => {
-          const bgUrl = service.backgroundImage?.sizes?.card?.url || service.backgroundImage?.url;
-          const { colSpan = 4, rowSpan = 1 } = service.gridLayout || {};
+     
 
           return (
             <Link
               key={service.id}
               href={`/services/${service.slug}`}
-              className="relative min-h-[280px] md:min-h-[300px]"
-              style={{
-                backgroundImage: bgUrl
-                  ? `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${bgUrl})`
-                  : undefined,
-                backgroundPosition: "center center",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-                borderRadius: "50px",
-                gridColumn: `span ${colSpan}`,
-                gridRow: `span ${rowSpan}`,
-              }}
+
             >
-              <div className="border-gradient-color flex flex-col justify-between h-full p-6 md:p-[1.875rem] group">
-                <div className="grid grid-cols-2">
-                  <div>
-                    <h1 className="text-white font-[700] text-xl md:text-2xl lg:text-[2rem]">
-                      {service.title}
-                    </h1>
-                  </div>
-                  <div className="flex items-start justify-end text-white">
-                    <Image
-                      className="-rotate-45 group-hover:-translate-y-2 group-hover:translate-x-2 transition-all duration-300 ease-in-out"
-                      src="/OurServices/angle.png"
-                      alt="arrow"
-                      width={30}
-                      height={30}
-                    />
-                  </div>
-                </div>
-                <div className="text-white text-base md:text-lg lg:text-[1.125rem] font-[400]">
-                  {service.shortDescription?.split("\n").map((line, i) => (
-                    <p key={i}>{line}</p>
-                  ))}
-                </div>
-              </div>
+              <CardService />
             </Link>
           );
         })}
@@ -190,10 +165,10 @@ export default function OurServices({ display = true, services = [] }) {
 //               </div>
 //             </div>
 //             <div className="text-white text-base md:text-lg lg:text-[1.125rem] font-[400]">
-  //               <p>Graphic & 3D Design</p>
-  //               <p>Product Packaging & Printing</p>
-  //               <p>Customized Giveaways & Trophies</p>
-  //               <p>Booth & Signage Design</p>
+//               <p>Graphic & 3D Design</p>
+//               <p>Product Packaging & Printing</p>
+//               <p>Customized Giveaways & Trophies</p>
+//               <p>Booth & Signage Design</p>
 //             </div>
 //           </div>
 //         </Link>
