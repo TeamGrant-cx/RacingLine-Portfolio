@@ -9,8 +9,8 @@
 
 :root {
   --background: #03031D;
-  --borderColor:"rgba(119, 189, 116, 1)";
-  
+  --borderColor: "rgba(119, 189, 116, 1)";
+
   --foreground: #04080E;
   --primary: #CA9343;
 
@@ -36,9 +36,11 @@ button {
 .FontMontserrat {
   font-family: var(--font-montserrat);
 }
+
 .PlayFair {
   font-family: var(--font-playfair);
 }
+
 /* test to push */
 .border-gradient-color {
   position: relative;
@@ -203,11 +205,9 @@ body {
   inset: 0;
   border-radius: inherit;
   padding: 2px;
-  background: linear-gradient(
-    to right,
-    rgba(110, 204, 247, 1),
-    rgba(167, 245, 163, 1)
-  );
+  background: linear-gradient(to right,
+      rgba(110, 204, 247, 1),
+      rgba(167, 245, 163, 1));
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -224,12 +224,45 @@ body {
 
 
 
-.glass{
-  position:fixed;inset:50% auto auto 50%;transform:translate(-50%,-50%);
-  width:20rem;height:20rem;border-radius:50%;
-  background:rgba(255,255,255,.08);border:2px solid transparent;
-  box-shadow:0 0 0 2px rgba(255,255,255,.6),0 16px 32px rgba(0,0,0,.12);
-  backdrop-filter:url(#frosted);-webkit-backdrop-filter:url(#frosted);
-  display:grid;place-items:center;cursor:pointer;outline:0;
+.glass {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, .08);
+  border: 0.2px solid transparent;
+  box-shadow:
+    0 0 8px rgba(110, 204, 247, 0.6),
+    0 0 20px rgba(110, 204, 247, 0.3),
+    inset 0 0 8px rgba(110, 204, 247, 0.1);
+  backdrop-filter: url(#frosted);
+  -webkit-backdrop-filter: url(#frosted);
+  /* display: grid;
+  place-items: center; */
+  cursor: pointer;
+  outline: 0;
 }
+
+.glow-border {
+  position: relative;
+}
+
+.glow-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(to right,
+      rgba(110, 204, 247, 1),
+      rgba(167, 245, 163, 1));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
 

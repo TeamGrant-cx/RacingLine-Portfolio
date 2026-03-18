@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import NeonText from "../NeonText/NeonText";
 
 export default function CardCategory({ SrcPage, text, bgImage }) {
   return (

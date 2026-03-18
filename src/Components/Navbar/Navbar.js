@@ -5,7 +5,6 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import LensGlass from "@/Components/Lensglass/Lensglass";
 
 export default function Navbar({ navItems = [], logo }) {
   const pathname = usePathname();
@@ -82,18 +81,20 @@ export default function Navbar({ navItems = [], logo }) {
                   )}
                 </Link>
 
-                {/* ── Liquid Glass Dropdown (WebGL) ── */}
-                {item?.dropdown?.length > 0 && (
-                  <LensGlass
-                    visible={activeDropdown === item.label}
-                    width={293}
-                    border="2px solid rgba(119, 189, 116, 1)"
-                    borderRadius="20px"
+                {/* ── Dropdown ── */}
+                {item?.dropdown?.length > 0 && activeDropdown === item.label && (
+                  <div 
+                  className="glass"
                     style={{
                       position: "absolute",
                       top: "calc(100% + 10px)",
                       left: 0,
                       zIndex: 100,
+                      width: 293,
+                      border: "3px solid rgba(119, 189, 116, 1)",
+                      borderRadius: "20px",
+                      // background: "rgba(0, 0, 0, 0.85)",
+                      // backdropFilter: "blur(12px)",
                     }}
                     onMouseEnter={() => handleMouseEnter(item.label)}
                     onMouseLeave={handleMouseLeave}
@@ -135,7 +136,7 @@ export default function Navbar({ navItems = [], logo }) {
                         </div>
                       ))}
                     </div>
-                  </LensGlass>
+                  </div>
                 )}
               </div>
             ))}
