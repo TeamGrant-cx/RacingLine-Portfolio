@@ -20,7 +20,7 @@ export default function OurServices({ display = true, services = [] }) {
         </div>
       )}
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-[20px]  glow-border  rounded-[1.875rem] p-8">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-[20px]  glow-border  rounded-[1.875rem] px-5 py-5">
         {services.map((service) => {
      
 

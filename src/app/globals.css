@@ -268,3 +268,69 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+.BarStyle {
+  position: relative;
+  padding-left: 2rem;
+  overflow: visible;
+}
+
+/* الـ bar الرأسي */
+.BarStyle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+ background: white;
+ /* background: linear-gradient(180deg,
+  rgba(110, 204, 247, 1)    0%,
+  rgba(0,   143, 255, 0.51) 50%,
+  rgba(0,   142, 255, 0.2)  100%
+); */
+  border-radius: 2px;
+box-shadow:
+  0 0 6px  rgba(110, 204, 247, 1),
+  0 0 20px rgba(0,   143, 255, 0.7),
+  0 0 50px rgba(0,   142, 255, 0.4);
+  z-index: 2;
+}
+
+.GlowCone {
+  position: absolute;
+  left: 0;
+  top: -75%;
+  width: 90px;
+  height: 250%;
+
+clip-path: polygon(
+  0%   30%,
+  100%  20%,  /* 50 - 41 */
+  100% 80%,  /* 50 + 41 */
+  0%   70%
+);
+
+background: radial-gradient(
+  ellipse at 0% 50%,
+  rgba(110, 204, 247, 0.45)   0%,
+  rgba(0, 143, 255, 0.2)     35%,
+  rgba(0, 142, 255, 0.08)    65%,
+  transparent                100%
+);
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+

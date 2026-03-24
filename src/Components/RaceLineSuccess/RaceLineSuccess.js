@@ -14,13 +14,10 @@ export default function RaceLineSuccess({ data }) {
           Takes You To The Finish Line Of Success?
 
         </div>
+        
         <div className="bg--500">
           <div className="py-5 group flex justify-center items-center gap-3 relative pb-2">
-            <i
-              className="fa-solid fa-angle-right text-[1.8rem] text-[#77BD74] 
-       transition-transform duration-500 
-       group-hover:scale-y-[-1]"
-            ></i>
+ 
             <p
               className="text-[1.5rem] text-[#C9CACF] 
        transition-transform duration-500 

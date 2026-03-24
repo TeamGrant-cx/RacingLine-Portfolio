@@ -1,0 +1,45 @@
+/* ── Carousel slide animations ── */
+@keyframes slideOutLeft {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+@keyframes slideInFromRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+@keyframes slideOutRight {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
+}
+@keyframes slideInFromLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+@keyframes slideOutUp {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100%); }
+}
+@keyframes slideInFromBottom {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+@keyframes slideOutDown {
+  from { transform: translateY(0); }
+  to { transform: translateY(100%); }
+}
+@keyframes slideInFromTop {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+/* Exit animations — old content becomes absolute so it overlaps with entering content */
+.anim-slide-out-left   { position: absolute; inset: 0; animation: slideOutLeft 0.8s cubic-bezier(0.9, 0, 0.3, 1) forwards; }
+.anim-slide-out-right  { position: absolute; inset: 0; animation: slideOutRight 0.8s cubic-bezier(0.9, 0, 0.3, 1) forwards; }
+.anim-slide-out-up     { position: absolute; inset: 0; animation: slideOutUp 0.8s cubic-bezier(0.9, 0, 0.3, 1) forwards; }
+.anim-slide-out-down   { position: absolute; inset: 0; animation: slideOutDown 0.8s cubic-bezier(0.9, 0, 0.3, 1) forwards; }
+
+/* Enter animations — new content flows normally */
+.anim-slide-in-right   { animation: slideInFromRight 0.8s cubic-bezier(0.9, 0, 0.3, 1) forwards; }
+.anim-slide-in-left    { animation: slideInFromLeft 0.8s cubic-bezier(0.9, 0, 0.3, 1) forwards; }
+.anim-slide-in-bottom  { animation: slideInFromBottom 0.8s cubic-bezier(0.9, 0, 0.3, 1) forwards; }
+.anim-slide-in-top     { animation: slideInFromTop 0.8s cubic-bezier(0.9, 0, 0.3, 1) forwards; }
