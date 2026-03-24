@@ -1,10 +1,23 @@
+.footerBg2 {
+  position: relative;
+  margin: 30px;
+  padding-right: 60px;
+  padding-left: 60px;
+  
+  padding-top: 50px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  background: linear-gradient(270deg, #0F102E 0%, #0F102E 70.67%, #0F102E 84.13%, #0F102E 97.12%);
+  z-index: 0;
+}
 .footerBg {
   position: relative;
   margin: 30px;
-  padding-top: 20px;
   padding-right: 60px;
-  padding-bottom: 20px;
   padding-left: 60px;
+  
+  padding-top: 50px;
+  padding-bottom: 20px;
   border-radius: 20px;
   background: linear-gradient(270deg, #0F102E 0%, #0F102E 70.67%, #0F102E 84.13%, #0F102E 97.12%);
   z-index: 0;

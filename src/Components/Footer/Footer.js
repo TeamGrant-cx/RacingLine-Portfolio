@@ -14,8 +14,26 @@ export default function Footer({ footerDesc, navItems = [], offices = [], social
 
   return (
 
-    
+
     <>
+
+
+      <div className="footerBg2 grid grid-cols-2">
+
+
+        <div className="bg--500">
+          <p className="text-[2.5rem] font-[600] text-white">
+            Ready to Accelerate Your Brand’s Growth through our
+            <span className="PlayFair italic font-[500]">Racing Line </span>
+            ?
+          </p>
+        </div>
+        <div className="bg--500 flex justify-center items-center">
+          <button className="glass glow-border bg-[#002B4D] hover:!bg-[#002B4D] rounded-[3.125rem] py-[1rem] px-[3.125rem] text-[1.5rem] text-white transition-colors duration-500">Request A Quotation</button>
+        </div>
+      </div>
+
+
       <footer className="footerBg   text-white">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
           <div className="flex flex-col justify-center items-center md:justify-start md:items-start">
@@ -60,7 +78,7 @@ export default function Footer({ footerDesc, navItems = [], offices = [], social
                 <li key={i}>
                   <Link href={item.href} className="cursor-pointer  transition-colors">
                     <i className="fa-solid fa-angle-right text-primary mr-2"></i>
-                    
+
                     {item.label}
                   </Link>
                 </li>
@@ -81,16 +99,16 @@ export default function Footer({ footerDesc, navItems = [], offices = [], social
                   {office.name} : {office.phone}
                 </li>
               ))}
-               <li className="cursor-pointer  transition-colors">
-                      <i className="fa-solid fa-envelope text-primary mr-2"></i>
-                      info@grant.cx.com
-                    </li>
-                  {offices[0]?.email && (
-                    <li className="cursor-pointer  transition-colors">
-                      <i className="fa-solid fa-envelope text-primary mr-2"></i>
-                      info@grant.cx.com
-                    </li>
-                  )}
+              <li className="cursor-pointer  transition-colors">
+                <i className="fa-solid fa-envelope text-primary mr-2"></i>
+                info@grant.cx.com
+              </li>
+              {offices[0]?.email && (
+                <li className="cursor-pointer  transition-colors">
+                  <i className="fa-solid fa-envelope text-primary mr-2"></i>
+                  info@grant.cx.com
+                </li>
+              )}
               {/* {offices[0]?.email && (
                 <li className="cursor-pointer  transition-colors">
                   <i className="fa-solid fa-envelope text-primary mr-2"></i>
