@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #CA9343;
+  --color-primary: #77BD74;
   --color-background: #ffffff;
   --color-foreground: #04080E;
 }
@@ -12,7 +12,7 @@
   --borderColor: "rgba(119, 189, 116, 1)";
 
   --foreground: #04080E;
-  --primary: #CA9343;
+  --primary: #77BD74;
 
 }
 
