@@ -9,6 +9,10 @@
 
     if (!res.ok) return <OurServices display={display} services={[]} />;
 
+
+    
     const json = await res.json();
+    console.log("json",json);
+
     return <OurServices display={display} services={json.docs ?? []} />;
   }

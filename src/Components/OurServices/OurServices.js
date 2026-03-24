@@ -9,7 +9,7 @@ export default function OurServices({ display = true, services = [] }) {
     <div className="mb-[5rem]">
       {display && (
         <div className={`${styles.BarStyleH} text-white text-center font-[600] text-2xl md:text-3xl lg:text-[2.5rem] mt-8 md:mt-12 lg:mt-[3.125rem] mb-6 md:mb-8 lg:mb-[1.875rem]`}>
-          <div className={styles.GlowConeDown} />
+          <div  />
           <p>
             Explore Our
             <span className="PlayFair italic mx-5 font-[500]">
@@ -20,7 +20,7 @@ export default function OurServices({ display = true, services = [] }) {
         </div>
       )}
 
-      <div className="grid grid-cols-4 gap-3 md:gap-[20px]">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-[20px]  glow-border  rounded-[1.875rem] p-8">
         {services.map((service) => {
      
 
