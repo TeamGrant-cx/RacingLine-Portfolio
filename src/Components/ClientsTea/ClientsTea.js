@@ -106,11 +106,9 @@ export default function ClientsTea({ reviews }) {
           </span>
         ))}
       </div>
-      <div className="flex items-start gap-2 mt-4">
-        <h3 className="text-white text-xl font-bold py-2 leading-snug">
-          {data.title || "Client Success Story"}
-        </h3>
-      </div>
+      <h3 className="text-white text-xl font-bold py-2 leading-snug mt-4">
+        {data.title || "Client Success Story"}
+      </h3>
     </div>
   );
 
@@ -142,27 +140,33 @@ export default function ClientsTea({ reviews }) {
     <>
       <div className="BarStyle font-[600] text-[2.5rem] leading-tight text-white">
         <div className="GlowCone" />
-        What <span className="PlayFair italic font-[500]">Winning Brands</span>
-        <br />
+        What
+        <span className="PlayFair italic font-[500]">Winning Brands </span>
+
         Say After Taking The Fastest Line To Growth
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6 p-10 min-h-[500px] w-full items-stretch">
         {/* Column 1: Client Info (3 cols) */}
         <div className="md:col-span-3 flex flex-col justify-between">
-          {/* Top section — tags + title (slides vertically) */}
-          <div className="overflow-hidden relative">
-            {prev && renderTopSection(prev, textExitClass)}
-            {renderTopSection(active, isAnimating ? textEnterClass : "")}
-          </div>
+          <div className="relative">
+            <i className="fa-solid fa-angle-right text-[1.8rem] text-[#77BD74] absolute -left-9 top-[3.8rem]"></i>
+            <div className="flex flex-col justify-between">
+              {/* Top section — tags + title (slides vertically) */}
+              <div className="overflow-hidden relative">
+                {prev && renderTopSection(prev, textExitClass)}
+                {renderTopSection(active, isAnimating ? textEnterClass : "")}
+              </div>
 
-          {/* Fixed separator line */}
-          <div className="w-full h-px bg-white/20 my-2" />
+              {/* Fixed separator line */}
+              <div className="w-full h-px bg-white/20 my-2" />
 
-          {/* Bottom section — comment + avatar (slides vertically) */}
-          <div className="overflow-hidden relative">
-            {prev && renderBottomSection(prev, textExitClass)}
-            {renderBottomSection(active, isAnimating ? textEnterClass : "")}
+              {/* Bottom section — comment + avatar (slides vertically) */}
+              <div className="overflow-hidden relative">
+                {prev && renderBottomSection(prev, textExitClass)}
+                {renderBottomSection(active, isAnimating ? textEnterClass : "")}
+              </div>
+            </div>
           </div>
 
           {/* NAVIGATION ARROWS */}

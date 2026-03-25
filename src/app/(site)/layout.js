@@ -46,7 +46,7 @@ export default async function SiteLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${montserrat.variable} ${playfair.variable} antialiased`}>
-        <div className="container mx-auto px-5 sm:px-10 lg:px-14">
+<div className="container mx-auto px-4 md:px-8 lg:px-16">
           <Navbar navItems={data ? data.navItems : []} logo={data?.logo} />
           {children}
         </div>

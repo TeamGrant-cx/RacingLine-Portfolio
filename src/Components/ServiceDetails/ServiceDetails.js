@@ -1,91 +1,86 @@
 "use client";
-import Image from "next/image";
 import React, { useState } from "react";
 
-export default function ServiceDetails({services,bgImage,topImage,aiPage=false}) {
-  const [openSection, setOpenSection] = useState(null);
+const accordionData = [
+  {
+    title: "Social Media Management",
+    content:
+      "Posting randomly and hoping for engagement isn't a strategy. It's a gamble, and the house always wins. We manage your social media accounts end-to-end: content planning, copywriting, design, scheduling, community management, and monthly performance reporting. Every post is aligned with your brand voice, timed for maximum reach, and designed to turn passive followers into active customers. You stay focused on your business while we keep your audience engaged, responsive, and growing.",
+  },
+  {
+    title: "Influencer Marketing",
+    content:
+      "Finding the right influencer isn't about who has the most followers. It's about who your audience actually trusts. We identify, vet, and negotiate with influencers who align with your brand values and speak directly to your target market. From micro-influencers with niche authority to high-profile creators with mass reach, we manage the entire campaign: briefing, content approval, posting schedules, and performance tracking. You get authentic endorsements that drive real conversions, not just expensive selfies with your product.",
+  },
+  {
+    title: "Paid Ads",
+    content:
+      "Throwing money at Facebook and hoping for the best isn't advertising. It's charity. We plan, launch, and optimize paid ad campaigns across Facebook, Instagram, TikTok, LinkedIn, X (Twitter), Snapchat, and Google. Every campaign is built on audience research, A/B tested creatives, and data-driven budget allocation. We monitor performance daily, adjust targeting in real time, and obsess over your cost per acquisition so you spend less and convert more. Your ad budget works harder because we do.",
+  },
+  {
+    title: "SEO/SEM",
+    content:
+      "If your website doesn't show up on the first page of Google, it might as well not exist. And yes, that applies to your beautifully designed site too. We provide full-service search engine optimization and search engine marketing: technical audits, keyword research, on-page optimization, link building, local SEO, and Google Ads management. We build organic visibility.",
+  },
+  {
+    title: "Content Marketing",
+    content:
+      "People don't wake up wanting to be sold to. They wake up wanting answers, insights, and solutions. Content marketing gives them exactly that while positioning your brand as the authority they trust. We develop content strategies, write blog posts, produce articles, create infographics, and build resource libraries that attract your ideal customers through search and social. Every piece is optimized for SEO, aligned with your sales funnel, and written to educate first and convert second. The brands that teach their market are the ones that lead it.",
+  },
+  {
+    title: "Email Marketing",
+    content:
+      "Your email list is the only audience you truly own. Algorithms can't throttle it, platforms can't take it away, and competitors can't outbid you for access to it. We design and execute email marketing campaigns that nurture leads, retain customers, and drive repeat purchases. From automated welcome sequences and abandoned cart recovery to monthly newsletters and promotional blasts, every email is segmented, personalized, and optimized for open rates and click-throughs. No spam, no fluff. Just emails people actually open.",
+  },
+];
 
-  const toggleSection = (index) => {
-    setOpenSection(openSection === index ? null : index);
+export default function ServiceDetails({ services, bgImage, topImage, aiPage = false }) {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggle = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
   };
-
-
 
   return (
     <>
-      <div className="px-[rem] overflow-">
-        <h1 className="text-primary text-center text-[2rem] mt-[6rem]">
-          Service Details
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 mt-[3rem] gap-[1.8rem]
-          ">
-          <div className="order-2 md:order-2 lg:order-1 w-full  aspect-[4/5] sm:aspect-[3/4] md:aspect-[4/5] lg:aspect-[] xl:aspect-[6/5]  bg--500 pt-[3rem] pr-[2.5rem] pl-[2.5rem] pb-[3rem] space-y-4 flex flex-col justify- border-gradient-color overflow-hidden  ">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="border border-primary/20 rounded-[2rem] overflow-hidden transition-all duration-300 flex-shrink-0"
-              >
-                <button
-                  onClick={() => toggleSection(index)}
-                  className={`w-full group ${openSection === index ? "bg-foreground text-primary" : "text-white bg-primary"} hover:bg-foreground hover:text-primary rounded-[2rem] pt-[1.25rem] pr-[1.25rem] pl-[1.25rem] pb-[0.625rem] text-[0.9rem] flex justify-start items-center gap-3 transition-all duration-300`}
-                >
-                  <i
-                    className={`fa-solid transition-transform duration-300 ${
-                      openSection === index ? "fa-plus rotate-180" : "fa-plus"
-                    } group-hover:rotate-90`}
-                  ></i>
-                  {service.title}
-                </button>
+      <div className="grid grid-cols-2 mt-[6.25rem]">
 
-                <div
-                  className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                    openSection === index
-                      ? "max-h-96 opacity-100"
-                      : "max-h-0 opacity-0"
-                  }`}
-                >
-                  <ul className="px-6 py-1 space-y-3 bg-primary/5">
-                    {service.items.map((item, itemIndex) => (
-                      <li
-                        key={itemIndex}
-                        className={`text-white flex items-start gap-3 transform transition-all duration-300`}
-                        style={{
-                          transitionDelay: `${itemIndex * 50}ms`,
-                        }}
-                      >
-                        <span className="">•</span>
-                        <span className="flex-1 text-[1rem]">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="">
+          <p className="text-[1rem] text-white">// SERVICE SPECIFICATIONS</p>
 
-          <div className="order-1 md:order-1 lg:order-2 relative w-full aspect-[4/5] sm:aspect-[3/4] md:aspect-[4/5] lg:aspect-[] xl:aspect-[6/5] border-gradient-color p-[0.125rem]  ">
-            <div className="relative w-full h-full rounded-[3rem] overflow-hidden h-[65%]">
-              <Image
-                className="object-cover"
-                src={bgImage}
-                alt="Background Image"
-                fill
-              />
-            </div>
-            <div className="absolute z-10 left-[6%] bottom-[.7%] bg--500   w-[110%] h-[110%]">
-              <Image
-                className="object-cover
-                
-                 w-full h-full"
-                src={topImage}
-                alt="Avatar Image"
-                fill
-              />
-            </div>
-            
+          <div className="BarStyle font-[600] text-[2.5rem] leading-tight text-white mt-2">
+            <div className="GlowCone" />
+            Engineering The Fastest Line To
+            <span className="PlayFair italic font-[500]"> Conversion</span>
           </div>
-          
         </div>
+
+        <div className="text-white">
+          {accordionData.map((item, index) => (
+            <div key={index} className="border-b border-white/20">
+              <div
+                className="flex justify-between items-center cursor-pointer py-4"
+                onClick={() => toggle(index)}
+              >
+                <p className="font-[500] text-[1.5rem]">{item.title}</p>
+                <i
+                  className={`fa-solid ${
+                    openIndex === index ? "fa-minus" : "fa-plus"
+                  } text-primary transition-transform duration-300`}
+                ></i>
+              </div>
+
+              <div
+                className={`overflow-hidden transition-all duration-300 ${
+                  openIndex === index ? "max-h-[500px] pb-4" : "max-h-0"
+                }`}
+              >
+                <p className="text-[1rem]">{item.content}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
       </div>
     </>
   );

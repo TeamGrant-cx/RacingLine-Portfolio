@@ -18,17 +18,17 @@ export default function Footer({ footerDesc, navItems = [], offices = [], social
     <>
 
 
-      <div className="footerBg2 grid grid-cols-2">
+      <div className="footerBg2 grid grid-cols-1 md:grid-cols-2">
 
 
-        <div className="bg--500">
-          <p className="text-[2.5rem] font-[600] text-white">
+        <div className="">
+          <p className="text-[2rem] font-[600] text-white">
             Ready to Accelerate Your Brand’s Growth through our
             <span className="PlayFair italic font-[500]">Racing Line </span>
             ?
           </p>
         </div>
-        <div className="bg--500 flex justify-center items-center">
+        <div className="py-5 flex justify-center items-center">
           <button className="glass glow-border bg-[#002B4D] hover:!bg-[#002B4D] rounded-[3.125rem] py-[1rem] px-[3.125rem] text-[1.5rem] text-white transition-colors duration-500">Request A Quotation</button>
         </div>
       </div>
@@ -44,7 +44,7 @@ export default function Footer({ footerDesc, navItems = [], offices = [], social
               height={100}
               className="mb-4"
             />
-            <p className="text-base text-center md:text-left md:text-lg leading-relaxed opacity-90">
+            <p className="text-base text-center md:text-left md:text-[1rem] leading-relaxed opacity-90">
               {footerDesc || "We are a leading digital marketing agency dedicated to helping businesses thrive in the online world. With a team of experts and a passion for innovation, we provide comprehensive solutions that drive results and elevate brands to new heights."}
             </p>
           </div>

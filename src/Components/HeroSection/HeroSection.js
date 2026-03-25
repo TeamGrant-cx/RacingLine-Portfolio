@@ -27,7 +27,7 @@ export default function HeroSection({ HeroData, ClientLogos }) {
           <div>
             <h1 className="hero-heading">
               A Performance Driven advertising Agency on the
-              <br />
+            
               <NeonHighlight text="Fastest Line to Growth" />
             </h1>
             <p className="text-[#D7D8DB] font-[400] text-[1.5rem]">Racing Line helps brands compete, adapt, and win in fast-moving markets.</p>
@@ -52,7 +52,7 @@ export default function HeroSection({ HeroData, ClientLogos }) {
         </div>
       </div>
 
-      {/* <ScrollingLogos logos={ClientLogos} /> */}
+      <ScrollingLogos logos={ClientLogos} />
     </>
   );
 }

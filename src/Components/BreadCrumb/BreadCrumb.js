@@ -19,26 +19,29 @@ export default function BreadCrumb({
     );
 
   return (
-    <div className=" container mx-auto px- md:px- lg:px-">
+    <div className="container">
 
-    <div className="border-gradient-color flex flex-col justify-center items-center py-[3.125rem] container mx-auto px-6 md:px-12 lg:px-24">
-      <h1 className="text-primary text-[2rem] md:text-[3rem] text-center leading-tight">
-        {formattedTitle}
-      </h1>
 
-      <h2 className="text-white text-[0.813rem] md:text-[0.938rem] font-[400] flex items-center gap-2 flex-wrap justify-center">
-        {title2}
-        <span className="inline-block bg-primary w-[8px] h-[8px] rounded-tl-[0.25rem] rounded-br-[0.25rem]" />
-        {title3}
-        {title4 && (
-          <>
-            <span className="inline-block bg-primary w-[8px] h-[8px] rounded-tl-[0.25rem] rounded-br-[0.25rem]" />
-            {title4}
-          </>
-        )}
-      </h2>
-    </div>
+      <p className="text-white">
+        <span className="text-[1rem] font-[600] font-semibold ">
+          Home
+        </span>
 
+        <span className="text-primary mx-3">
+          /
+        </span>
+        <span className="text-[0.9rem] font-[600] font-semibold uppercase text-[#ABB1BA]">
+          Our Services
+        </span>
+        <span className="text-primary mx-3">
+          /
+        </span>
+
+        <span className="text-[0.9rem] font-[600] font-semibold uppercase text-[#ABB1BA]">
+          Digital Marketing
+        </span>
+
+      </p>
     </div>
 
   );
