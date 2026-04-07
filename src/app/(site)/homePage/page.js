@@ -1,5 +1,7 @@
+import ClientsTea from '@/Components/ClientsTea/ClientsTea';
 import ClientsTeaServer from '@/Components/ClientsTea/ClientsTeaServer'
 import HeroSection from '@/Components/HeroSection/HeroSection'
+import OurServices from '@/Components/OurServices/OurServices';
 import OurServicesServer from '@/Components/OurServices/OurServicesServer'
 import RaceLineSuccess from '@/Components/RaceLineSuccess/RaceLineSuccess';
 import React from 'react'
@@ -27,9 +29,9 @@ export default async function HomePage() {
       <div className=''>
         <HeroSection  />
         <RaceLineSuccess  />
-        <OurServicesServer />
+        <OurServices />
       </div>
-      <ClientsTeaServer  />
+      <ClientsTea />
     </>
   )
 }

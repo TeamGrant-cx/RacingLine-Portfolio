@@ -10,7 +10,7 @@ export default async function ClientsTeaServer( { data } ) {
   });
 
   
-  if (!res.ok) return <ClientsTea reviews={[]} />;
+  if (!res.ok) return <ClientsTea  />;
 
   const json = await res.json();
 
@@ -18,5 +18,5 @@ export default async function ClientsTeaServer( { data } ) {
   
   const reviews = json?.docs ?? [];
 
-  return <ClientsTea    data={data}     reviews={reviews} />;
+  return <ClientsTea     />;
 }

@@ -14,5 +14,5 @@
     const json = await res.json();
     console.log("json",json);
 
-    return <OurServices display={display} services={json.docs ?? []} />;
+    return <OurServices display={display}  />;
   }
