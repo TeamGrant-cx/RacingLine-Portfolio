@@ -38,23 +38,17 @@ async function getContactInfo() {
 }
 
 export default async function SiteLayout({ children }) {
-  const [data, contactInfo] = await Promise.all([
-    getSiteSettings(),
-    getContactInfo(),
-  ]);
+
 
   return (
     <html lang="en">
       <body className={`${montserrat.variable} ${playfair.variable} antialiased`}>
-<div className="container mx-auto px-4 md:px-8 lg:px-16">
-          <Navbar navItems={data ? data.navItems : []} logo={data?.logo} />
+        <div className="container mx-auto px-4 md:px-8 lg:px-16">
+          <Navbar />
           {children}
         </div>
         <Footer
-          footerDesc={data?.footerDescription}
-          navItems={data?.navItems ?? []}
-          offices={contactInfo?.offices ?? []}
-          socialLinks={contactInfo?.socialLinks ?? {}}
+
         />
       </body>
     </html>

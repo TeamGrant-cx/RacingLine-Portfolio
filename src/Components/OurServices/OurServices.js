@@ -4,7 +4,12 @@ import Link from "next/link";
 import CardService from "../CardService/CardService";
 import styles from "./OurServices.module.css";
 
-export default function OurServices({ display = true, services = [] }) {
+export default function OurServices({ display = true}) {
+  const services= [
+    { id: 1, name: "SEO", slug: "seo" },
+    { id: 2, name: "PPC", slug: "ppc" },
+    { id: 3, name: "Content Marketing", slug: "content-marketing" },
+  ]
   return (
     <div className="mb-[5rem]">
       {display && (

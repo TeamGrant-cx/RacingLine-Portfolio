@@ -13,23 +13,23 @@ async function getHomePageData() {
 }
 
 export default async function HomePage() {
-  const data = await getHomePageData();
+  // const data = await getHomePageData();
 
 
     
-  const HeroData = data?.hero ?? {};
-  const ClientLogos = data?.clientLogos ?? [];
-  const RaceLineSuccessData = data?.raceLineSuccess ?? {};
-  const ClientsTea = data?.clientsTea ?? {};
+  // const HeroData = data?.hero ?? {};
+  // const ClientLogos = data?.clientLogos ?? [];
+  // const RaceLineSuccessData = data?.raceLineSuccess ?? {};
+  // const ClientsTea = data?.clientsTea ?? {};
 
   return (
     <>
       <div className=''>
-        <HeroSection HeroData={HeroData} ClientLogos={ClientLogos} />
-        <RaceLineSuccess data={RaceLineSuccessData} />
+        <HeroSection  />
+        <RaceLineSuccess  />
         <OurServicesServer />
       </div>
-      <ClientsTeaServer data={ClientsTea} />
+      <ClientsTeaServer  />
     </>
   )
 }

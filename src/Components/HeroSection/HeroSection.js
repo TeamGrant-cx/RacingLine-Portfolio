@@ -19,7 +19,19 @@ const NeonHighlight = ({ text }) => (
   </span>
 );
 
-export default function HeroSection({ HeroData, ClientLogos }) {
+export default function HeroSection({ HeroData   }) {
+  const ClientLogos=[
+
+    '/imgs/img1.png',
+    '/imgs/img2.png',
+    '/imgs/img3.png',
+    '/imgs/img4.png',
+    '/imgs/img5.png',
+    '/imgs/img6.png',
+    '/imgs/img7.png',
+    '/imgs/img8.png',
+
+  ]
   return (
     <>
       <div

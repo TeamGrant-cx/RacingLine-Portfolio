@@ -14,7 +14,6 @@ async function getServices() {
 }
 
 export default async function Portfolio() {
-  const services = await getServices();
 
   return (
     <>

@@ -140,20 +140,20 @@ export default function ContactClient({ data }) {
                     <div className={styles.flagContainer}>
                       <Image
                         className="object-cover w-full h-full"
-                        src={office?.flag?.url || "/ContactUs/egypt.jpg"}
-                        alt={office?.flag?.alt || "Office Flag"}
+                        src={"/ContactUs/egypt.jpg"}
+                        alt={"Office Flag"}
                         width={70}
                         height={70}
                       />
                     </div>
                     <div className={styles.officeInfo}>
-                      <h3 className={styles.officeTitle}>{office?.name || "Office Title"}</h3>
+                      <h3 className={styles.officeTitle}>{ "Office Title"}</h3>
                       <p className={styles.officeAddress}>
                         {office?.address || "Office Address"}
                       </p>
                       <p className={styles.officeLabel}>For General Inquiries:</p>
-                      <p className={styles.officeContact}>{office?.email || "info@cremediaeg.com"}</p>
-                      <p className={styles.officeContact}>{office?.phone || "Office Phone"}</p>
+                      <p className={styles.officeContact}>{"info@cremediaeg.com"}</p>
+                      <p className={styles.officeContact}>{"Office Phone"}</p>
                     </div>
                   </div>
                 );

@@ -4,13 +4,38 @@ import "@/Components/Footer/Footer.css";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Footer({ footerDesc, navItems = [], offices = [], socialLinks = {} }) {
+export default function Footer() {
   // Extract service dropdown items from navItems
-  const servicesNav = navItems.find((item) => item.dropdown?.length > 0);
-  const serviceLinks = servicesNav?.dropdown ?? [];
+  // const servicesNav = navItems.find((item) => item.dropdown?.length > 0);
+  // const serviceLinks = servicesNav?.dropdown ?? [];
 
   // Sitemap links (non-dropdown items)
-  const sitemapLinks = navItems.filter((item) => !item.dropdown?.length && item.href !== "/");
+  // const sitemapLinks = navItems.filter((item) => !item.dropdown?.length && item.href !== "/");
+
+  const sitemapLinks = [
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Case Studies", href: "/case-studies" },
+    { label: "Blog", href: "/blog" },
+    { label: "Contact Us", href: "/contact" },
+  ]
+
+  const serviceLinks=[
+    { label: "SEO", href: "/services/seo" },
+    { label: "PPC", href: "/services/ppc" },
+    { label: "Content Marketing", href: "/services/content-marketing" },
+  ]
+const offices = [
+  { name: "New York Office", phone: "+1 212-555-1234", email: " " },
+  { name: "Los Angeles Office", phone: "+1 323-555-1234", email: " " },
+  { name: "Chicago Office", phone: "+1 312-555-1234", email: " " }
+];
+const socialLinks = {
+  instagram: "https://www.instagram.com/racingline.marketing/",
+  linkedin: "https://www.linkedin.com/company/racingline-marketing-agency/",
+  facebook: "https://www.facebook.com/RacingLineMarketingAgency"
+};
 
   return (
 
@@ -45,7 +70,7 @@ export default function Footer({ footerDesc, navItems = [], offices = [], social
               className="mb-4"
             />
             <p className="text-base text-center md:text-left md:text-[1rem] leading-relaxed opacity-90">
-              {footerDesc || "We are a leading digital marketing agency dedicated to helping businesses thrive in the online world. With a team of experts and a passion for innovation, we provide comprehensive solutions that drive results and elevate brands to new heights."}
+              We are a leading digital marketing agency dedicated to helping businesses thrive in the online world. With a team of experts and a passion for innovation, we provide comprehensive solutions that drive results and elevate brands to new heights.
             </p>
           </div>
 
