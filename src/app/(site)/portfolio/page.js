@@ -3,18 +3,15 @@ import CardCategory from "@/Components/CardCategory/CardCategory";
 import Image from "next/image";
 import React from "react";
 
-async function getServices() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_SITE_URL}/api/services?depth=1&sort=gridLayout.order`,
-    { cache: "no-store" }
-  );
-  if (!res.ok) return [];
-  const json = await res.json();
-  return json.docs ?? [];
-}
 
 export default async function Portfolio() {
 
+
+    const services= [
+    { id: 1, name: "SEO", slug: "seo" },
+    { id: 2, name: "PPC", slug: "ppc" },
+    { id: 3, name: "Content Marketing", slug: "content-marketing" },
+  ]
   return (
     <>
       <BreadCrumb title1="OUR PORTFOLIO" title2="Home" title3="Our portfolio" />
