@@ -10,7 +10,7 @@ export default function ServiceDesc({ title, desc }) {
         <>
             <div className="py-[3.125rem] ">
                 <p className="text-white text-center mx-auto text-[2.5rem] font-[600] w-[70%] font-semibold">
-                    How Digital Marketing Accelerates Your Brand's Growth
+                    How Digital Marketing Accelerates Your Brand&apos;s Growth
                 </p>
             </div>
 

@@ -46,7 +46,11 @@ export default function ServiceDetails({ services, bgImage, topImage, aiPage = f
       <div className="grid grid-cols-2 mt-[6.25rem]">
 
         <div className="">
-          <p className="text-[1rem] text-white">// SERVICE SPECIFICATIONS</p>
+          <p className="text-[1rem] text-white">
+
+            {"// SERVICE SPECIFICATIONS"}
+            
+            </p>
 
           <div className="BarStyle font-[600] text-[2.5rem] leading-tight text-white mt-2">
             <div className="GlowCone" />

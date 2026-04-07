@@ -120,7 +120,8 @@ export default function ClientsTea({ reviews }) {
       </p>
       <div className="flex items-center gap-3 pt-4">
         <div className="w-8 h-8 rounded-full bg-gray-700 overflow-hidden border border-gray-600">
-          <img src={data.avatar || "/ClientsTea/Ellipse 26.png"} alt="user" />
+
+          <Image src="/ClientsTea/Ellipse 26.png" alt="user" width={32} height={32} />
         </div>
         <span className="text-white text-xs font-semibold">
           {data.userName || "Anonymous Client"}
