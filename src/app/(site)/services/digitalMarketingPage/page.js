@@ -1,3 +1,4 @@
+import ProjectShowcaseDigital from "@/Components/ProjectShowcaseDigital/ProjectShowcaseDigital";
 import "./digitalMarketing.css";
 import BreadCrumb from "@/Components/BreadCrumb/BreadCrumb";
 import ServiceDesc from "@/Components/ServiceDesc/ServiceDesc";
@@ -5,6 +6,9 @@ import ServiceDetails from "@/Components/ServiceDetails/ServiceDetails";
 import Image from "next/image";
 
 import React from "react";
+import ProjectShowcaseOffline from "@/Components/ProjectShowcaseOffline/ProjectShowcaseOffline";
+import ProjectShowcaseSoftwareServices from "@/Components/ProjectShowcaseSoftwareServices/ProjectShowcaseSoftwareServices";
+import ServiceDetailsAi from "@/Components/ServiceDetailsAi/ServiceDetailsAi";
 
 
 export default function DigitalMarketing() {
@@ -78,6 +82,9 @@ export default function DigitalMarketing() {
 
 <ServiceDesc/>
 <ServiceDetails/>
+
+
+<ProjectShowcaseDigital/>
 
     </>
   );

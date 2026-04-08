@@ -31,7 +31,7 @@ export default async function HomePage() {
         <RaceLineSuccess  />
         <OurServices />
       </div>
-      <ClientsTea />
+  <ClientsTea />
     </>
   )
 }
