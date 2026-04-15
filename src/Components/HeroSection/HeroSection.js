@@ -19,8 +19,8 @@ const NeonHighlight = ({ text }) => (
   </span>
 );
 
-export default function HeroSection({ HeroData   }) {
-  const ClientLogos=[
+export default function HeroSection({ HeroData }) {
+  const ClientLogos = [
 
     '/imgs/img1.png',
     '/imgs/img2.png',
@@ -35,7 +35,7 @@ export default function HeroSection({ HeroData   }) {
   return (
     <>
       <div
-        className="grid grid-cols-2 relative min-h-screen"
+        className=" relative  grid grid-cols-1 gap-0"
         style={{
           backgroundImage: "url('/HeroSection/Car.png')",
           backgroundSize: "cover",
@@ -43,9 +43,9 @@ export default function HeroSection({ HeroData   }) {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="flex flex-col justify-evenly relative z-10 bg-[#03031D]">
+        <div className="grid grid-cols-2   justify-evenly relative z-10 ">
 
-          <div  className="p-5">
+          <div className="p-5 bg-[#03031D]">
             <h1 className="hero-heading">
               A Performance Driven advertising Agency on the
               <NeonHighlight text="Fastest Line to Growth" />
@@ -55,12 +55,41 @@ export default function HeroSection({ HeroData   }) {
             </p>
           </div>
 
-          <div className="grid grid-cols-4 gap-2 mt-5 w-[120%] p-5 bg-[#03031D] rounded-tr-[20px] rounded-br-[20px]" >
+          <div className="rounded-tr-[20px] rounded-b-[20px] bg--300 relative">
+            <Image src="/hero_corner.svg" alt="Logo" width={15} height={15} className="absolute top-0 right-0 scale-x-[-1]" />
+            <Image src="/hero_corner.svg" alt="Logo" width={15} height={15} className="absolute top-0 left-0" />
+            <Image src="/hero_corner.svg" alt="Logo" width={15} height={15} className="absolute bottom-0 left-0 scale-y-[-1]" />
+
+          </div>
+
+        </div>
+        <div className="grid grid-cols-2   justify-evenly relative z-10 ">
+
+          <div className="grid grid-cols-4 gap-2  w-[120%] p-5 bg-[#03031D] rounded-tr-[20px] rounded-br-[20px]" >
             <CardCategory SrcPage={`/services/digitalMarketing`} text={"Digital Marketing"} bgImage={"/OurServices/ourservices4.png"} />
             <CardCategory SrcPage={`/services/digitalMarketing`} text={"Offline Marketing"} bgImage={"/OurServices/ourservices4.png"} />
             <CardCategory SrcPage={`/services/digitalMarketing`} text={"Event Management"} bgImage={"/OurServices/ourservices4.png"} />
             <CardCategory SrcPage={`/services/digitalMarketing`} text={"Web Development"} bgImage={"/OurServices/ourservices4.png"} />
           </div>
+
+          <div className="bg-transparent ">
+            ..
+          </div>
+
+        </div>
+        <div className="grid grid-cols-[30%_70%] gap-0 relative z-10">
+
+          <div className="bg-[#03031D] text-white flex items-center justify-between p-2">
+
+            <p>Explore our full range of marketing services</p>
+            <i className="fa-solid fa-chevron-left"></i>
+            <i className="fa-solid fa-chevron-right"></i>
+          </div>
+
+          <div className="bg-red-300 rounded-tl-[20px] rounded-bl-[20px]" >
+            ..
+          </div>
+
         </div>
       </div>
 
