@@ -1,0 +1,37 @@
+/* ── Vertical carousel slide animations ── */
+@keyframes slideOutUp {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-100%); opacity: 0; }
+}
+@keyframes slideInFromBottom {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes slideOutDown {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(100%); opacity: 0; }
+}
+@keyframes slideInFromTop {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Exit animations — old content becomes absolute so it overlaps with entering content */
+.animSlideOutUp {
+  position: absolute;
+  inset: 0;
+  animation: slideOutUp 0.8s cubic-bezier(0.9, 0, 0.3, 1) forwards;
+}
+.animSlideOutDown {
+  position: absolute;
+  inset: 0;
+  animation: slideOutDown 0.8s cubic-bezier(0.9, 0, 0.3, 1) forwards;
+}
+
+/* Enter animations — new content flows normally */
+.animSlideInBottom {
+  animation: slideInFromBottom 0.8s cubic-bezier(0.9, 0, 0.3, 1) forwards;
+}
+.animSlideInTop {
+  animation: slideInFromTop 0.8s cubic-bezier(0.9, 0, 0.3, 1) forwards;
+}
