@@ -70,7 +70,7 @@ export default function ProjectShowcaseDigital() {
   const enterClass = direction === "next" ? styles.animSlideInBottom : styles.animSlideInTop;
 
   const renderMiddleContent = (data, animClass) => (
-    <div className={`${animClass} flex flex-col justify-between h-full`}>
+    <div className={`${animClass} flex flex-col justify-between h-full pt-6 px-5 md:px-8 pb-8`}>
       <div>
         <div>
           <Image src={data.logo} alt={data.logoAlt} width={200} height={60} className="object-contain" />
@@ -124,7 +124,7 @@ export default function ProjectShowcaseDigital() {
         </div>
 
         {/* Middle Panel - Project Details */}
-        <div className="bg-[#0F102E] rounded-[20px] pt-6 px-5 md:px-8 pb-8 flex flex-col justify-between gap-4 md:gap-0 overflow-hidden relative">
+        <div className="bg-[#0F102E] rounded-[20px] overflow-hidden relative">
           {prev && renderMiddleContent(prev, exitClass)}
           {renderMiddleContent(active, isAnimating ? enterClass : "")}
         </div>
