@@ -2,18 +2,22 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default function CardCategory({ SrcPage, text, bgImage }) {
+export default function CardCategory({ SrcPage, text, bgImage, withHoverEffect = false }) {
   return (
     <Link
       href={SrcPage}
-      className="border-gradient-color group
-       rounded-[1.25rem] py-[1.25rem]"
+      className={`border-gradient-color 
+       rounded-[1.25rem] py-[1.25rem] ${withHoverEffect ? 'group' : ''}`}
 
     >
 
       <div className="relative w-full aspect-[389/280] overflow-visible">
         <Image
-          className="absolute -top-8 left-1/2 -translate-x-1/2 w-[80%] h-auto"
+          className={`absolute -top-8 left-1/2 -translate-x-1/2 w-[80%] h-auto ${
+            withHoverEffect
+              ? 'transition-transform duration-700 group-hover:scale-150 group-hover:rotate-20'
+              : ''
+          }`}
           src="/HeroSection/mic.png"
           alt="arrow"
           width={389}

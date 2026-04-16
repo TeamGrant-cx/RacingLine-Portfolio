@@ -81,24 +81,8 @@ button {
   transition: box-shadow 0.3s ease;
 }
 
-.border-gradient-color:hover {
-  box-shadow:
-    /* Brighter white core on hover */
-    0 0 7px rgba(255, 255, 255, 0.6),
-    0 0 15px rgba(255, 255, 255, 0.3),
-    /* Brighter colored glow */
-    0 0 25px rgba(207, 238, 252, 0.5),
-    0 0 50px rgba(207, 238, 252, 0.3),
-    0 0 100px rgba(211, 250, 209, 0.2),
-    /* Inset glow */
-    inset 0 0 8px rgba(255, 255, 255, 0.2),
-    inset 0 0 20px rgba(207, 238, 252, 0.15);
-}
 
-.border-gradient-color:hover::before {
-  background: linear-gradient(143.9deg, #D3FAD1 0%, #CFEEFC 100%);
-  transform: scale(1.05);
-}
+
 
 .arrow-icon-glow {
   color: rgba(120, 189, 117, 1);

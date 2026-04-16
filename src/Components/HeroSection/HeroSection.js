@@ -35,7 +35,11 @@ export default function HeroSection({ HeroData }) {
   return (
     <>
       <div
-        className=" relative  grid grid-cols-1 gap-0"
+        className=" relative  grid grid-cols-1 gap-0 rounded-br-[15px] 
+                rounded-tr-[15px]
+
+        
+        "
         style={{
           backgroundImage: "url('/HeroSection/Car.png')",
           backgroundSize: "cover",
@@ -56,7 +60,7 @@ export default function HeroSection({ HeroData }) {
           </div>
 
           <div className="rounded-tr-[20px] rounded-b-[20px] bg--300 relative">
-            <Image src="/hero_corner.svg" alt="Logo" width={15} height={15} className="absolute top-0 right-0 scale-x-[-1]" />
+
             <Image src="/hero_corner.svg" alt="Logo" width={15} height={15} className="absolute top-0 left-0" />
             <Image src="/hero_corner.svg" alt="Logo" width={15} height={15} className="absolute bottom-0 left-0 scale-y-[-1]" />
 
@@ -65,11 +69,19 @@ export default function HeroSection({ HeroData }) {
         </div>
         <div className="grid grid-cols-2   justify-evenly relative z-10 ">
 
-          <div className="grid grid-cols-4 gap-2  w-[120%] p-5 bg-[#03031D] rounded-tr-[20px] rounded-br-[20px]" >
-            <CardCategory SrcPage={`/services/digitalMarketing`} text={"Digital Marketing"} bgImage={"/OurServices/ourservices4.png"} />
-            <CardCategory SrcPage={`/services/digitalMarketing`} text={"Offline Marketing"} bgImage={"/OurServices/ourservices4.png"} />
-            <CardCategory SrcPage={`/services/digitalMarketing`} text={"Event Management"} bgImage={"/OurServices/ourservices4.png"} />
-            <CardCategory SrcPage={`/services/digitalMarketing`} text={"Web Development"} bgImage={"/OurServices/ourservices4.png"} />
+          <div className="grid grid-cols-4 gap-5  w-[120%] p-5 bg-[#03031D] rounded-tr-[20px] rounded-br-[20px]" >
+            <div className="transition-transform duration-400 hover:scale-110">
+              <CardCategory SrcPage={`/services/digitalMarketing`} text={"Digital Marketing"} bgImage={"/OurServices/ourservices4.png"} withHoverEffect={true} />
+            </div>
+            <div className="transition-transform duration-400 hover:scale-110">
+              <CardCategory SrcPage={`/services/digitalMarketing`} text={"Offline Marketing"} bgImage={"/OurServices/ourservices4.png"} withHoverEffect={true} />
+            </div>
+            <div className="transition-transform duration-400 hover:scale-110">
+              <CardCategory SrcPage={`/services/digitalMarketing`} text={"Event Management"} bgImage={"/OurServices/ourservices4.png"} withHoverEffect={true} />
+            </div>
+            <div className="transition-transform duration-400 hover:scale-110">
+              <CardCategory SrcPage={`/services/digitalMarketing`} text={"Web Development"} bgImage={"/OurServices/ourservices4.png"} withHoverEffect={true} />
+            </div>
           </div>
 
           <div className="bg-transparent ">
@@ -81,13 +93,23 @@ export default function HeroSection({ HeroData }) {
 
           <div className="bg-[#03031D] text-white flex items-center justify-between p-2">
 
-            <p>Explore our full range of marketing services</p>
-            <i className="fa-solid fa-chevron-left"></i>
-            <i className="fa-solid fa-chevron-right"></i>
+            <p className="text-[#6ECCF7] text-[1.5rem] font-[700]">Explore our full range of marketing services</p>
+            <i className="text-[1.5rem] mx-2 text-[#6ECCF7] fa-solid fa-chevron-left"></i>
+            <i className="text-[1.5rem] mx-2 text-[#6ECCF7] fa-solid fa-chevron-right"></i>
           </div>
+          <div className="bg--300 relative">
+            {/* Top-left - original orientation */}
+            <Image src="/hero_corner.svg" alt="Logo" width={15} height={15}
+              className="absolute top-0 left-0" />
 
-          <div className="bg-red-300 rounded-tl-[20px] rounded-bl-[20px]" >
-            ..
+
+            {/* Bottom-left - flip vertically */}
+            <Image src="/hero_corner.svg" alt="Logo" width={15} height={15}
+              className="absolute bottom-0 left-0 scale-y-[-1]" />
+
+            {/* Bottom-right - flip both */}
+            {/* <Image src="/hero_corner.svg" alt="Logo" width={15} height={15}
+              className="absolute bottom-0 right-0 scale-x-[-1] scale-y-[-1]" /> */}
           </div>
 
         </div>
