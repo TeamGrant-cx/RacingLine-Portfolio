@@ -1,5 +1,6 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import "@/Components/HeroSection/HeroSection.css";
 import CardCategory from "../CardCategory/CardCategory";
 import ScrollingLogos from "./ScrollingLogos";
@@ -20,8 +21,29 @@ const NeonHighlight = ({ text }) => (
 );
 
 export default function HeroSection({ HeroData }) {
-  const ClientLogos = [
+  const cards = [
+    { SrcPage: "/services/digitalMarketing", text: "Digital Marketing", bgImage: "/OurServices/ourservices4.png" },
+    { SrcPage: "/services/mediaProduction", text: "Media Production", bgImage: "/OurServices/ourservices4.png" },
+    { SrcPage: "/services/webDevelopment", text: "Web & App Development", bgImage: "/OurServices/ourservices4.png" },
+    { SrcPage: "/services/events", text: "Events & Activations", bgImage: "/OurServices/ourservices4.png" },
+    { SrcPage: "/services/branding", text: "Branding", bgImage: "/OurServices/ourservices4.png" },
+    { SrcPage: "/services/socialMedia", text: "Social Media", bgImage: "/OurServices/ourservices4.png" },
+    { SrcPage: "/services/seo", text: "SEO", bgImage: "/OurServices/ourservices4.png" },
+    { SrcPage: "/services/contentCreation", text: "Content Creation", bgImage: "/OurServices/ourservices4.png" },
+  ];
 
+  const maxOffset = cards.length - 4;
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev === 0 ? maxOffset : prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev >= maxOffset ? 0 : prev + 1));
+  };
+
+  const ClientLogos = [
     '/imgs/img1.png',
     '/imgs/img2.png',
     '/imgs/img3.png',
@@ -30,7 +52,6 @@ export default function HeroSection({ HeroData }) {
     '/imgs/img6.png',
     '/imgs/img7.png',
     '/imgs/img8.png',
-
   ]
   return (
     <>
@@ -67,20 +88,21 @@ export default function HeroSection({ HeroData }) {
           </div>
 
         </div>
-        <div className="grid grid-cols-2   justify-evenly relative z-10 ">
+        <div className=" grid grid-cols-2   justify-evenly relative z-10 ">
 
-          <div className="grid grid-cols-4 gap-5  w-[120%] p-5 bg-[#03031D] rounded-tr-[20px] rounded-br-[20px]" >
-            <div className="transition-transform duration-400 hover:scale-110">
-              <CardCategory SrcPage={`/services/digitalMarketing`} text={"Digital Marketing"} bgImage={"/OurServices/ourservices4.png"} withHoverEffect={true} />
-            </div>
-            <div className="transition-transform duration-400 hover:scale-110">
-              <CardCategory SrcPage={`/services/digitalMarketing`} text={"Offline Marketing"} bgImage={"/OurServices/ourservices4.png"} withHoverEffect={true} />
-            </div>
-            <div className="transition-transform duration-400 hover:scale-110">
-              <CardCategory SrcPage={`/services/digitalMarketing`} text={"Event Management"} bgImage={"/OurServices/ourservices4.png"} withHoverEffect={true} />
-            </div>
-            <div className="transition-transform duration-400 hover:scale-110">
-              <CardCategory SrcPage={`/services/digitalMarketing`} text={"Web Development"} bgImage={"/OurServices/ourservices4.png"} withHoverEffect={true} />
+          <div className="w-[120%] p-5 bg-[#03031D] rounded-tr-[20px] rounded-br-[20px] overflow-x-clip overflow-y-visible" >
+            <div
+              className="flex transition-transform duration-700 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * 25}%)` }}
+            >
+              {cards.map((card, index) => (
+                <div
+                  key={index}
+                  className="w-1/4 flex-shrink-0 px-2.5 transition-transform duration-400 hover:scale-110"
+                >
+                  <CardCategory SrcPage={card.SrcPage} text={card.text} bgImage={card.bgImage} withHoverEffect={true} />
+                </div>
+              ))}
             </div>
           </div>
 
@@ -94,8 +116,12 @@ export default function HeroSection({ HeroData }) {
           <div className="bg-[#03031D] text-white flex items-center justify-between p-2">
 
             <p className="text-[#6ECCF7] text-[1.5rem] font-[700]">Explore our full range of marketing services</p>
-            <i className="text-[1.5rem] mx-2 text-[#6ECCF7] fa-solid fa-chevron-left"></i>
-            <i className="text-[1.5rem] mx-2 text-[#6ECCF7] fa-solid fa-chevron-right"></i>
+            <button onClick={handlePrev} className="cursor-pointer">
+              <i className="text-[1.5rem] mx-2 text-[#6ECCF7] fa-solid fa-chevron-left"></i>
+            </button>
+            <button onClick={handleNext} className="cursor-pointer">
+              <i className="text-[1.5rem] mx-2 text-[#6ECCF7] fa-solid fa-chevron-right"></i>
+            </button>
           </div>
           <div className="bg--300 relative">
             {/* Top-left - original orientation */}
