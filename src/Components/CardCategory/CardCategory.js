@@ -2,22 +2,22 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default function CardCategory({ SrcPage, text, bgImage, withHoverEffect = false }) {
+export default function CardCategory({ SrcPage, text, bgImage, cardImage, withHoverEffect = false }) {
   return (
     <Link
       href={SrcPage}
       className={`border-gradient-color
-       rounded-[1.25rem] aspect-[1/1.15] flex flex-col justify-between p-[1rem] ${withHoverEffect ? 'group' : ''}`}
+       rounded-[1.25rem] aspect-[1/1.15] flex flex-col justify-end p-[0.8rem] pb-[0.6rem] ${withHoverEffect ? 'group' : ''}`}
 
     >
 
       <div className="relative w-full flex-1 overflow-visible">
-        <Image className={`absolute -top-8 left-1/2 -translate-x-1/2 w-[80%] h-auto ${
+        <Image className={`absolute -top-5 left-1/2 -translate-x-1/2 w-[100%] h-auto ${
             withHoverEffect
               ? 'transition-transform duration-700 group-hover:scale-150 group-hover:rotate-20'
               : ''
           }`}
-          src="/HeroSection/mic.png"
+          src={cardImage}
           alt="arrow"
           width={389}
           height={280}
@@ -25,11 +25,11 @@ export default function CardCategory({ SrcPage, text, bgImage, withHoverEffect =
       </div>
 
 
-      <div className="flex items-center justify-between text-white pt-[0.5rem]">
+      <div className="flex items-end justify-between text-white gap-2 z-10">
 
-        <h1 className="text-white text-[0.99em] font-[500]">{text}</h1>
+        <h1 className="text-white text-[0.95em] font-[600] leading-[1.25]">{text}</h1>
 
-        <i className="text-[2.3rem] rotate-45 fa-solid fa-chevron-right arrow-icon-glow" ></i>
+        <i className="text-[1.8rem] rotate-45 fa-solid fa-chevron-right arrow-icon-glow flex-shrink-0 mb-[0.1rem]"></i>
 
       </div>
 

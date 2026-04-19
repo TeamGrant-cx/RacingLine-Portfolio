@@ -22,14 +22,43 @@ const NeonHighlight = ({ text }) => (
 
 export default function HeroSection({ HeroData }) {
   const cards = [
-    { SrcPage: "/services/digitalMarketing", text: "Digital Marketing", bgImage: "/OurServices/ourservices4.png" },
-    { SrcPage: "/services/mediaProduction", text: "Media Production", bgImage: "/OurServices/ourservices4.png" },
-    { SrcPage: "/services/webDevelopment", text: "Web & App Development", bgImage: "/OurServices/ourservices4.png" },
-    { SrcPage: "/services/events", text: "Events & Activations", bgImage: "/OurServices/ourservices4.png" },
-    { SrcPage: "/services/branding", text: "Branding", bgImage: "/OurServices/ourservices4.png" },
-    { SrcPage: "/services/socialMedia", text: "Social Media", bgImage: "/OurServices/ourservices4.png" },
-    { SrcPage: "/services/seo", text: "SEO", bgImage: "/OurServices/ourservices4.png" },
-    { SrcPage: "/services/contentCreation", text: "Content Creation", bgImage: "/OurServices/ourservices4.png" },
+    {
+      SrcPage: "/services/digitalMarketingPage",
+      text: "Digital Marketing",
+      cardImage: "/HeroSection/mic.png",
+      bgImage: "/OurServices/ourservices4.png"
+    },
+    {
+      SrcPage: "/services/digitalMarketingPage",
+      text: "Media Production",
+      cardImage: "/HeroSection/printer.png",
+      bgImage: "/OurServices/ourservices4.png"
+    },
+    {
+      SrcPage: "/services/digitalMarketingPage",
+      text: "Web & App Development",
+      cardImage: "/HeroSection/game.png",
+      bgImage: "/OurServices/ourservices4.png"
+    },
+    {
+      SrcPage: "/services/digitalMarketingPage",
+      text: "Digital Marketing",
+      cardImage: "/HeroSection/mic.png",
+      bgImage: "/OurServices/ourservices4.png"
+    },
+    {
+      SrcPage: "/services/digitalMarketingPage",
+      text: "Media Production",
+      cardImage: "/HeroSection/printer.png",
+      bgImage: "/OurServices/ourservices4.png"
+    },
+    {
+      SrcPage: "/services/digitalMarketingPage",
+      text: "Web & App Development",
+      cardImage: "/HeroSection/game.png",
+      bgImage: "/OurServices/ourservices4.png"
+    },
+
   ];
 
   const maxOffset = cards.length - 4;
@@ -100,7 +129,7 @@ export default function HeroSection({ HeroData }) {
                   key={index}
                   className="w-1/4 flex-shrink-0 px-2.5 transition-transform duration-400 hover:scale-110"
                 >
-                  <CardCategory SrcPage={card.SrcPage} text={card.text} bgImage={card.bgImage} withHoverEffect={true} />
+                  <CardCategory  SrcPage={card.SrcPage} text={card.text} cardImage={card.cardImage} bgImage={card.bgImage} withHoverEffect={true} />
                 </div>
               ))}
             </div>
