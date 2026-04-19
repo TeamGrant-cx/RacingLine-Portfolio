@@ -14,7 +14,7 @@ export default function CardCategory({ SrcPage, text, bgImage, cardImage, withHo
       <div className="relative w-full flex-1 overflow-visible">
         <Image className={`absolute -top-5 left-1/2 -translate-x-1/2 w-[100%] h-auto ${
             withHoverEffect
-              ? 'transition-transform duration-700 group-hover:scale-150 group-hover:rotate-20'
+              ? 'transition-transform duration-700 group-hover:scale-120 group-hover:rotate-10'
               : ''
           }`}
           src={cardImage}
