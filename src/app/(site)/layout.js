@@ -3,6 +3,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../globals.css";
 import Navbar from "@/Components/Navbar/Navbar";
 import Footer from "@/Components/Footer/Footer";
+import LiquidGlassEffect from "@/Components/LiquidGlassEffect/LiquidGlassEffect";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -43,6 +44,7 @@ export default async function SiteLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${montserrat.variable} ${playfair.variable} antialiased`}>
+        <LiquidGlassEffect />
         <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <Navbar />
           {children}
