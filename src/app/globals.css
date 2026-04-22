@@ -9,7 +9,7 @@
 
 :root {
   --background: #03031D;
-  --borderColor: "rgba(119, 189, 116, 1)";
+  --borderColor: rgba(119, 189, 116, 1);
 
   --foreground: #04080E;
   --primary: #77BD74;
@@ -213,6 +213,11 @@ body {
     inset 0 0 8px rgba(110, 204, 247, 0.1);
   backdrop-filter: url(#frosted);
   -webkit-backdrop-filter: url(#frosted);
+  /* Force dedicated GPU compositor layer so Chromium reliably
+     applies backdrop-filter: url() in production builds. */
+  isolation: isolate;
+  transform: translateZ(0);
+  will-change: backdrop-filter;
   /* display: grid;
   place-items: center; */
   cursor: pointer;
@@ -263,7 +268,7 @@ body {
   overflow: visible;
 }
 
-/* الـ bar الرأسي */
+/* vertical bar */
 .BarStyle::before {
   content: "";
   position: absolute;
