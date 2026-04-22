@@ -128,8 +128,8 @@ export default function Navbar() {
                     width: 293,
                     border: "3px solid rgba(119, 189, 116, 1)",
                     borderRadius: "20px",
-                    // background: "rgba(0, 0, 0, 0.85)",
-                    // backdropFilter: "blur(12px)",
+                    backdropFilter: "url(#frosted)",
+                    WebkitBackdropFilter: "url(#frosted)",
                   }}
                   onMouseEnter={() => handleMouseEnter(item.label)}
                   onMouseLeave={handleMouseLeave}
