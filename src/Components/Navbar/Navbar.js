@@ -26,7 +26,7 @@ export default function Navbar() {
     setActiveDropdown(label);
   };
   const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => setActiveDropdown(null), 4000);
+    // timeoutRef.current = setTimeout(() => setActiveDropdown(null), 600);
   };
   const toggleMobileDropdown = (label) =>
     setActiveDropdownMobile(activeDropdownMobile === label ? null : label);
