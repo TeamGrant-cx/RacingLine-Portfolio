@@ -211,17 +211,28 @@ body {
     0 0 8px rgba(110, 204, 247, 0.6),
     0 0 20px rgba(110, 204, 247, 0.3),
     inset 0 0 8px rgba(110, 204, 247, 0.1);
-  backdrop-filter: url(#frosted);
-  -webkit-backdrop-filter: url(#frosted);
-  /* Force dedicated GPU compositor layer so Chromium reliably
-     applies backdrop-filter: url() in production builds. */
+  /* Apple iOS 18 preset: soft fractal noise + heavier frost + vivid saturation */
+  backdrop-filter: brightness(1.05) blur(8px) saturate(1.4) url(#frosted);
+  -webkit-backdrop-filter: brightness(1.05) blur(8px) saturate(1.4) url(#frosted);
   isolation: isolate;
   transform: translateZ(0);
   will-change: backdrop-filter;
-  /* display: grid;
-  place-items: center; */
   cursor: pointer;
   outline: 0;
+}
+
+/* Inner white rim highlight (from Vue demo) */
+.glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  box-shadow:
+    inset 6px 6px 0 -6px rgba(255, 255, 255, 0.7),
+    inset 0 0 8px 1px rgba(255, 255, 255, 0.7);
+  pointer-events: none;
 }
 
 .glow-border {

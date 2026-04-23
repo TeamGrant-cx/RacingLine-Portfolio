@@ -9,6 +9,7 @@ import React from "react";
 import ProjectShowcaseOffline from "@/Components/ProjectShowcaseOffline/ProjectShowcaseOffline";
 import ProjectShowcaseSoftwareServices from "@/Components/ProjectShowcaseSoftwareServices/ProjectShowcaseSoftwareServices";
 import ServiceDetailsAi from "@/Components/ServiceDetailsAi/ServiceDetailsAi";
+import { glassBackdrop } from "@/Components/LiquidGlassEffect/glassStyle";
 
 
 export default function DigitalMarketing() {
@@ -44,7 +45,12 @@ export default function DigitalMarketing() {
         <p className="my-3 text-[#F1F2F4] font-semibold text-[2rem] uppercase">Accelerate Your Brand With Precision-Driven, Data-Led Strategies On The Digital Track.</p>
 
 
-        <button className="my- glass glow-border bg-[#002B4D] hover:!bg-[#002B4D] rounded-[3.125rem] py-[1rem] px-[3.125rem] text-[1.5rem] text-white transition-colors duration-500">Get A Free Consultation</button>
+        <button
+          className="my- glass glow-border rounded-[3.125rem] py-[1rem] px-[3.125rem] text-[1.5rem] text-white transition-colors duration-500"
+          style={glassBackdrop}
+        >
+          Get A Free Consultation
+        </button>
 
       </div>
 

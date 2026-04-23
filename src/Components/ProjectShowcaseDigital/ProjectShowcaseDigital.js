@@ -3,6 +3,7 @@
 import React, { useState, useCallback } from "react";
 import styles from "./ProjectShowcaseDigital.module.css";
 import Image from "next/image";
+import { glassBackdrop } from "@/Components/LiquidGlassEffect/glassStyle";
 
 const projects = [
   {
@@ -86,7 +87,10 @@ export default function ProjectShowcaseDigital() {
           {data.description}
         </p>
 
-        <button className="mt-4 md:mt-6 glass glow-border bg-[#002B4D] hover:!bg-[#002B4D] rounded-[3.125rem] py-[0.7rem] md:py-[0.8rem] px-[2rem] md:px-[2.5rem] text-[1rem] md:text-[1.1rem] tracking-wider font-[600] text-white transition-colors duration-500 w-fit">
+        <button
+          className="mt-4 md:mt-6 glass glow-border rounded-[3.125rem] py-[0.7rem] md:py-[0.8rem] px-[2rem] md:px-[2.5rem] text-[1rem] md:text-[1.1rem] tracking-wider font-[600] text-white transition-colors duration-500 w-fit"
+          style={glassBackdrop}
+        >
           VIEW PROJECT
         </button>
       </div>

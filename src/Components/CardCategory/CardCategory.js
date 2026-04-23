@@ -6,20 +6,20 @@ export default function CardCategory({ SrcPage, text, bgImage, cardImage, withHo
   return (
     <Link
       href={SrcPage}
-      className={`border-gradient-color
+      className={`border-gradient-color 
        rounded-[1.25rem] aspect-[1/1.15] flex flex-col justify-end p-[0.8rem] pb-[0.6rem] ${withHoverEffect ? 'group' : ''}`}
 
     >
 
       <div className="relative w-full flex-1 overflow-visible">
-        <Image className={`absolute -top-5 left-1/2 -translate-x-1/2 w-[100%] h-auto ${
+        <Image className={` absolute -top-5 left-1/2 -translate-x-1/2 w-[100%] h-auto ${
             withHoverEffect
               ? 'transition-transform duration-700 group-hover:scale-120 group-hover:rotate-10'
               : ''
           }`}
           src={cardImage}
           alt="arrow"
-          width={389}
+          width={600}
           height={280}
         />
       </div>

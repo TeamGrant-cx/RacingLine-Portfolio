@@ -121,7 +121,7 @@ export default function HeroSection({ HeroData }) {
 
           <div className="w-[120%] p-5 bg-[#03031D] rounded-tr-[20px] rounded-br-[20px] overflow-x-clip overflow-y-visible" >
             <div
-              className="flex transition-transform duration-700 ease-in-out"
+              className=" flex transition-transform duration-700 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 25}%)` }}
             >
               {cards.map((card, index) => (

@@ -128,13 +128,13 @@ export default function Navbar() {
                     width: 293,
                     border: "3px solid rgba(119, 189, 116, 1)",
                     borderRadius: "20px",
-                    backdropFilter: "url(#frosted)",
-                    WebkitBackdropFilter: "url(#frosted)",
+                    backdropFilter: "brightness(1.05) blur(8px) saturate(1.4) url(#frosted)",
+                    WebkitBackdropFilter: "brightness(1.05) blur(8px) saturate(1.4) url(#frosted)",
                   }}
                   onMouseEnter={() => handleMouseEnter(item.label)}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <div style={{ padding: "8px 15px" }}>
+                  <div style={{ padding: "8px 15px", position: "relative", zIndex: 1 }}>
                     {item.dropdown.map((subItem, index) => (
                       <div key={subItem.label}>
                         <Link

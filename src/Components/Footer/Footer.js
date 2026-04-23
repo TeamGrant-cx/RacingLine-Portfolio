@@ -3,6 +3,7 @@ import React from "react";
 import "@/Components/Footer/Footer.css";
 import Image from "next/image";
 import Link from "next/link";
+import { glassBackdrop } from "@/Components/LiquidGlassEffect/glassStyle";
 
 export default function Footer() {
   // Extract service dropdown items from navItems
@@ -54,7 +55,12 @@ const socialLinks = {
           </p>
         </div>
         <div className="py-5 flex justify-center items-center">
-          <button className="glass glow-border bg-[#002B4D] hover:!bg-[#002B4D] rounded-[3.125rem] py-[1rem] px-[3.125rem] text-[1.5rem] text-white transition-colors duration-500">Request A Quotation</button>
+          <button
+            className="glass glow-border rounded-[3.125rem] py-[1rem] px-[3.125rem] text-[1.5rem] text-white transition-colors duration-500"
+            style={glassBackdrop}
+          >
+            Request A Quotation
+          </button>
         </div>
       </div>
 
