@@ -170,7 +170,10 @@ export default function HeroSection({ HeroData }) {
         </div>
       </div>
 
-      {/* <ScrollingLogos logos={ClientLogos} /> */}
+<div className="my-[5rem]">
+
+      <ScrollingLogos logos={ClientLogos} />
+</div>
     </>
   );
 }
