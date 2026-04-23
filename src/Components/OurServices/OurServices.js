@@ -22,12 +22,28 @@ export default function OurServices({ display = true}) {
             </span>
             That Drive Your Brand&#39;s Performance
           </p>
+          <div
+          
+            aria-hidden
+            className="h-[3px] w-[140px] rounded-[2px] bg-white mx-auto mt-4"
+            style={{
+              boxShadow:
+                "0 0 6px rgba(110,204,247,1), 0 0 20px rgba(0,143,255,0.7), 0 0 50px rgba(0,142,255,0.4)",
+            }}
+          />
         </div>
       )}
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-[20px]  glow-border  rounded-[1.875rem] px-5 py-5">
+      <div
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-[20px] rounded-[1.875rem] px-5 py-5"
+        style={{
+          border: "2px solid #6eccf7",
+          boxShadow:
+            "0 0 2.5px #008eff, 0 0 7.5px #008eff, 0 0 14px rgba(0,142,255,0.8), 0 0 32px rgba(0,142,255,0.55), 0 0 64px rgba(0,142,255,0.35), inset 0 0 24px rgba(0,142,255,0.12)",
+        }}
+      >
         {services.map((service) => {
-     
+
 
           return (
             <Link

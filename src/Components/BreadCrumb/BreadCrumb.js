@@ -6,17 +6,7 @@ export default function BreadCrumb({
   title3 = "",
   title4 = "",
 }) {
-  const words = title1.trim().split(/\s+/);
 
-  const formattedTitle =
-    words.length >= 4 ? (
-      <>
-        {words.slice(0, 2).join(" ")} <br />
-        {words.slice(2).join(" ")}
-      </>
-    ) : (
-      title1
-    );
 
   return (
     <div className="container">
@@ -24,22 +14,28 @@ export default function BreadCrumb({
 
       <p className="text-white">
         <span className="text-[1rem] font-[600] font-semibold ">
-          Home
+          {title1 }
         </span>
 
         <span className="text-primary mx-3">
           /
         </span>
         <span className="text-[0.9rem] font-[600] font-semibold uppercase text-[#ABB1BA]">
-          Our Services
+          {title2}
         </span>
-        <span className="text-primary mx-3">
+
+        {title3 && (
+          <>
+               <span className="text-primary mx-3">
           /
         </span>
 
         <span className="text-[0.9rem] font-[600] font-semibold uppercase text-[#ABB1BA]">
-          Digital Marketing
+          {title3}
         </span>
+          </>
+        )}
+   
 
       </p>
     </div>

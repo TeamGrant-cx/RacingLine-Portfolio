@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import styles from "./RaceLineSuccess.module.css";
+import GlassButton from "@/Components/GlassButton/GlassButton";
 
 export default function RaceLineSuccess({ data }) {
   return (
@@ -77,8 +78,10 @@ export default function RaceLineSuccess({ data }) {
             />
           </div>
 
-          <div
-            className={`glass glow-border  !absolute transition-all duration-300 ease-in-out  -rotate-[8.78deg] top-[0%] right-[200px] group-hover:top-2 group-hover:right-[180px] flex justify-around   rounded-full px-5 py-3 text-white `}
+          <GlassButton
+            as="div"
+            transition={false}
+            className="!absolute transition-all duration-300 ease-in-out -rotate-[8.78deg] top-[0%] right-[200px] group-hover:top-2 group-hover:right-[180px] flex justify-around rounded-full px-5 py-3 text-white"
           >
             <div className="mx-2 ">
               <p className="text-[2rem] font-[700] leading-none">10</p>
@@ -87,7 +90,7 @@ export default function RaceLineSuccess({ data }) {
               <p className="text-[0.85rem] font-[500]">Served</p>
               <p className="text-[0.85rem] font-[500]">Markets</p>
             </div>
-          </div>
+          </GlassButton>
 
           <p className="text-[9.5rem] font-[600] text-[#C8C9D0] ">25+</p>
           <p className="text-[1.5rem] font-[400] text-[#C8C9D0] ">
@@ -114,9 +117,13 @@ export default function RaceLineSuccess({ data }) {
             />
           </div>
 
-          <div className={`glass glow-border !absolute transition-all duration-300 ease-in-out  rotate-[8.78deg] top-[5%] left-[210px] group-hover:top-2 group-hover:left-[190px] flex justify-around   rounded-full px-5 py-3 text-white  `}>
+          <GlassButton
+            as="div"
+            transition={false}
+            className="!absolute transition-all duration-300 ease-in-out rotate-[8.78deg] top-[5%] left-[210px] group-hover:top-2 group-hover:left-[190px] flex justify-around rounded-full px-5 py-3 text-white"
+          >
             <p className="text-[0.85rem] font-[500]">Leading Brands</p>
-          </div>
+          </GlassButton>
 
           <p className="text-[9.5rem] font-[600] text-[#C8C9D0] ">100+</p>
           <p className="text-[1.5rem] font-[400] text-[#C8C9D0] ">
@@ -139,7 +146,11 @@ export default function RaceLineSuccess({ data }) {
             />
           </div>
 
-          <div className=" glass glow-border !absolute transition-all duration-300 ease-in-out  rounded-full w-[70px] h-[70px] rotate-[8.78deg] -top-[20%] right-[150px] group-hover:top-1 overflow-hidden flex items-center justify-center p-3">
+          <GlassButton
+            as="div"
+            transition={false}
+            className="!absolute transition-all duration-300 ease-in-out rounded-full w-[70px] h-[70px] rotate-[8.78deg] -top-[20%] right-[150px] group-hover:top-1 overflow-hidden flex items-center justify-center p-3"
+          >
             <Image
               src="/RaceLineSuccess/Vector3.png"
               alt="Avatar"
@@ -147,8 +158,12 @@ export default function RaceLineSuccess({ data }) {
               height={70}
               className="w-full h-full object-contain"
             />
-          </div>
-          <div className=" glass glow-border !absolute transition-all duration-300 ease-in-out  rounded-full w-[70px] h-[70px] rotate-[8.78deg] top-[0%] left-[280px] group-hover:top-2 group-hover:left-[250px] overflow-hidden flex items-center justify-center p-3">
+          </GlassButton>
+          <GlassButton
+            as="div"
+            transition={false}
+            className="!absolute transition-all duration-300 ease-in-out rounded-full w-[70px] h-[70px] rotate-[8.78deg] top-[0%] left-[280px] group-hover:top-2 group-hover:left-[250px] overflow-hidden flex items-center justify-center p-3"
+          >
             <Image
               src="/RaceLineSuccess/Vector4.png"
               alt="Avatar"
@@ -156,7 +171,7 @@ export default function RaceLineSuccess({ data }) {
               height={70}
               className="w-full h-full object-contain"
             />
-          </div>
+          </GlassButton>
 
           <p className="text-[9.5rem] font-[600] text-[#C8C9D0] ">7</p>
           <p className="text-[1.5rem] font-[400] text-[#C8C9D0] ">
