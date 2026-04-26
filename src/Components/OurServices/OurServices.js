@@ -8,12 +8,17 @@ export default function OurServices({ display = true}) {
   const services= [
     { id: 1, name: "SEO", slug: "seo" },
     { id: 2, name: "PPC", slug: "ppc" },
-    { id: 3, name: "Content Marketing", slug: "content-marketing" },
+    { id: 3, name: "PPC", slug: "ppc" },
+    { id: 4, name: "PPC", slug: "ppc" },
+    { id: 5, name: "PPC", slug: "ppc" },
+    { id: 6, name: "PPC", slug: "ppc" },
+    { id: 7, name: "PPC", slug: "ppc" },
+    { id: 8, name: "Content Marketing", slug: "content-marketing" },
   ]
   return (
-    <div className="mb-[5rem] flex flex-col items-center">
+    <div className="py-[3.125rem] flex flex-col items-center">
       {display && (
-        <div className={`${styles.BarStyleH} w-[50%] text-white text-center font-[600] text-2xl md:text-3xl lg:text-[2.5rem] mt-8 md:mt-12 lg:mt-[3.125rem] mb-6 md:mb-8 lg:mb-[1.875rem]`}>
+        <div className={`${styles.BarStyleH} w-[70%] text-white text-center font-[600] text-2xl md:text-3xl lg:text-[2.5rem] mt-8 md:mt-12 lg:mt-[3.125rem] mb-6 md:mb-8 lg:mb-[1.875rem]`}>
           <div  />
           <p>
             Explore Our
@@ -35,7 +40,7 @@ export default function OurServices({ display = true}) {
       )}
 
       <div
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-[20px] rounded-[1.875rem] px-5 py-5"
+        className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-[20px] rounded-[1.875rem] px-5 py-5"
         style={{
           border: "2px solid #6eccf7",
           boxShadow:

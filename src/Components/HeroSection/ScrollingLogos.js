@@ -7,7 +7,7 @@ export default function ScrollingLogos({ logos, speed = 20 }) {
   const items = [...logos, ...logos];
 
   return (
-    <div className="mt-5 h-[80px] rounded-[50px] flex items-center overflow-hidden ">
+    <div className="py-[3.125rem] h-[80px] rounded-[50px] flex items-center overflow-hidden ">
       <div
         className={styles.track}
         style={{ animationDuration: `${speed}s` }}

@@ -6,8 +6,6 @@ import ServiceDetails from "@/Components/ServiceDetails/ServiceDetails";
 import Image from "next/image";
 
 import React from "react";
-import ProjectShowcaseOffline from "@/Components/ProjectShowcaseOffline/ProjectShowcaseOffline";
-import ProjectShowcaseSoftwareServices from "@/Components/ProjectShowcaseSoftwareServices/ProjectShowcaseSoftwareServices";
 import ServiceDetailsAi from "@/Components/ServiceDetailsAi/ServiceDetailsAi";
 import { glassBackdrop } from "@/Components/LiquidGlassEffect/glassStyle";
 

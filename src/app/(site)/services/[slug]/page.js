@@ -8,8 +8,6 @@ import CardServiceImage from "@/Components/CardService/CardServiceImage";
 import CardServiceImageHalf from "@/Components/CardService/CardServiceImageHalf";
 import CardServiceVideo from "@/Components/CardService/CardServiceVideo";
 import ProjectShowcaseDigital from "@/Components/ProjectShowcaseDigital/ProjectShowcaseDigital";
-import ProjectShowcaseSoftwareServices from "@/Components/ProjectShowcaseSoftwareServices/ProjectShowcaseSoftwareServices";
-import ProjectShowcaseOffline from "@/Components/ProjectShowcaseOffline/ProjectShowcaseOffline";
 
 async function getServiceBySlug(slug) {
   const res = await fetch(
@@ -28,10 +26,7 @@ function getProjectShowcase(project) {
   switch (project.showcaseLayout) {
     case "digital":
       return <ProjectShowcaseDigital project={project} />;
-    case "software":
-      return <ProjectShowcaseSoftwareServices project={project} />;
-    case "offline":
-      return <ProjectShowcaseOffline project={project} />;
+  
     default:
       return <ProjectShowcaseDigital project={project} />;
   }

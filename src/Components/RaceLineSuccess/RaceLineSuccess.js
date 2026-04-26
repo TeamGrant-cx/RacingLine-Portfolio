@@ -6,7 +6,7 @@ import GlassButton from "@/Components/GlassButton/GlassButton";
 export default function RaceLineSuccess({ data }) {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-[6.25rem]">
         <div className={`${styles.BarStyle} font-[600] text-[2.5rem] text-white self-start`} >
 
           <div className={styles.GlowCone} />
@@ -65,7 +65,8 @@ export default function RaceLineSuccess({ data }) {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 pt-[3rem] pb-[6.25rem]">
         {/* First Div */}
 
         <div className="bg--500 flex flex-col justify-center items-center relative group pt-16">

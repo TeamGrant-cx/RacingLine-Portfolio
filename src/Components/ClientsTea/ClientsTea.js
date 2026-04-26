@@ -139,7 +139,7 @@ export default function ClientsTea({ reviews }) {
 
   return (
     <>
-      <div className="BarStyle font-[600] text-[2.5rem] leading-tight text-white w-[55%] ">
+      <div className="BarStyle font-[600] text-[2.5rem] leading-tight text-white w-[55%]  mt-[6.25rem]">
         <div className="GlowCone" />
         What
         <span className="PlayFair italic font-[500]">Winning Brands </span>
@@ -147,7 +147,7 @@ export default function ClientsTea({ reviews }) {
         Say After Taking The Fastest Line To Growth
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 p-10 min-h-[500px] w-full items-stretch">
+      <div className="mt-[3.125rem] grid grid-cols-1 md:grid-cols-12 gap-6 p-10 min-h-[500px] w-full items-stretch">
         {/* Column 1: Client Info (3 cols) */}
         <div className="md:col-span-3 flex flex-col justify-between">
           <div className="relative">

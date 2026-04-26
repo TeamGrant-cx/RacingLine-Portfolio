@@ -63,7 +63,7 @@ export default function ContactClient({ data }) {
 
   return (
     <>
-      <BreadCrumb title1="Contact Us" title2="Home" title3="Contact Us" />
+      <BreadCrumb  title1="Home" title2="Contact Us" />
       <div className="container mx-auto px-4 py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="bg--500 py-12 md:py-24 text-center md:text-left order-2 md:order-1">
