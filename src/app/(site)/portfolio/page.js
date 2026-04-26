@@ -14,7 +14,7 @@ export default async function Portfolio() {
   ]
   return (
     <>
-      <BreadCrumb title1="OUR PORTFOLIO" title2="Home" title3="Our portfolio" />
+      <BreadCrumb title1="HOME"  title2="Our Portfolio" />
 
       <div className="container mx-auto px-4 py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">

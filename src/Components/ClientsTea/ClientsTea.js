@@ -139,7 +139,7 @@ export default function ClientsTea({ reviews }) {
 
   return (
     <>
-      <div className="BarStyle font-[600] text-[2.5rem] leading-tight text-white">
+      <div className="BarStyle font-[600] text-[2.5rem] leading-tight text-white w-[55%] ">
         <div className="GlowCone" />
         What
         <span className="PlayFair italic font-[500]">Winning Brands </span>

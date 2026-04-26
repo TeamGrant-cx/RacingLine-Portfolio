@@ -11,9 +11,9 @@ export default function OurServices({ display = true}) {
     { id: 3, name: "Content Marketing", slug: "content-marketing" },
   ]
   return (
-    <div className="mb-[5rem]">
+    <div className="mb-[5rem] flex flex-col items-center">
       {display && (
-        <div className={`${styles.BarStyleH} text-white text-center font-[600] text-2xl md:text-3xl lg:text-[2.5rem] mt-8 md:mt-12 lg:mt-[3.125rem] mb-6 md:mb-8 lg:mb-[1.875rem]`}>
+        <div className={`${styles.BarStyleH} w-[50%] text-white text-center font-[600] text-2xl md:text-3xl lg:text-[2.5rem] mt-8 md:mt-12 lg:mt-[3.125rem] mb-6 md:mb-8 lg:mb-[1.875rem]`}>
           <div  />
           <p>
             Explore Our
