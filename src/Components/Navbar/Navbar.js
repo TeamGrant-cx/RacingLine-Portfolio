@@ -74,7 +74,7 @@ export default function Navbar() {
   ];
 
   return(
-    <nav className = {`navParent left-0 right-0 z-50 transition-all duration-800`} >
+    <nav className = {`navParent left-0 right-0 z-50 transition-all duration-800 mb-[2rem]`} >
     <div className="max-w-[100%] mx-auto mt-2 px-4 sm:px-6 lg:px-[1.063rem] py-[0.563rem] font-bold gradient-border">
       <div className="flex items-center justify-between">
 
