@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import BreadCrumb from "@/Components/BreadCrumb/BreadCrumb";
 import ServiceDesc from "@/Components/ServiceDesc/ServiceDesc";
 import ServiceDetails from "@/Components/ServiceDetails/ServiceDetails";
-import ServiceDetailsAi from "@/Components/ServiceDetailsAi/ServiceDetailsAi";
 import CardServiceLottie from "@/Components/CardService/CardServiceLottie";
 import CardServiceImage from "@/Components/CardService/CardServiceImage";
 import CardServiceImageHalf from "@/Components/CardService/CardServiceImageHalf";
@@ -130,19 +129,7 @@ export default async function ServicePage({ params }) {
             ))}
           </div>
 
-          {slug === "ai" ? (
-            <ServiceDetailsAi
-              bgImage={service.serviceDetailsImage?.sizes?.card?.url || service.serviceDetailsImage?.url || "/OurServices/OfflineServices/bgImage.png"}
-              services={serviceDetailsList}
-              topImage={service.serviceDetailsAvatar?.sizes?.card?.url || service.serviceDetailsAvatar?.url || "/OurServices/Ai/avatar.png"}
-            />
-          ) : (
-            <ServiceDetails
-              bgImage={service.serviceDetailsImage?.sizes?.card?.url || service.serviceDetailsImage?.url || "/OurServices/WebServices/bgImage.jpg"}
-              services={serviceDetailsList}
-              topImage={service.serviceDetailsAvatar?.sizes?.card?.url || service.serviceDetailsAvatar?.url || "/OurServices/WebServices/avatar2.png"}
-            />
-          )}
+    
         </div>
 
         {(service.projectShowcase ?? [])

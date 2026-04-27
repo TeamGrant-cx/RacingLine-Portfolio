@@ -4,7 +4,6 @@ import HeroSection from '@/Components/HeroSection/HeroSection'
 import OurServices from '@/Components/OurServices/OurServices';
 import OurServicesServer from '@/Components/OurServices/OurServicesServer'
 import RaceLineSuccess from '@/Components/RaceLineSuccess/RaceLineSuccess';
-import ServicesGridFigma from '@/Components/ServicesGridFigma/ServicesGridFigma';
 import React from 'react'
 
 async function getHomePageData() {

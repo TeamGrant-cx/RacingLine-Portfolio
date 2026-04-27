@@ -6,7 +6,6 @@ import ServiceDetails from "@/Components/ServiceDetails/ServiceDetails";
 import Image from "next/image";
 
 import React from "react";
-import ServiceDetailsAi from "@/Components/ServiceDetailsAi/ServiceDetailsAi";
 import { glassBackdrop } from "@/Components/LiquidGlassEffect/glassStyle";
 
 
@@ -27,10 +26,9 @@ export default function DigitalMarketing() {
       <div className="">
 
         <BreadCrumb
-          title1="Digital Marketing Services"
-          title2="Home"
-          title3="Our Services"
-          title4="Digital Marketing"
+          title1="Home"
+          title2="Our Services"
+          title3="Digital Marketing Services"
         />
         <p className="my- text-white font-[700] font-bold text-[4rem] uppercase leading-tight">
           Fuel Your

@@ -3,7 +3,6 @@ import Image from "next/image";
 import React from "react";
 import "@/app/(site)/about/about.css";
 import Link from "next/link";
-import CardFamily from "@/Components/CardFamily/CardFamily";
 import GlassButton from "@/Components/GlassButton/GlassButton";
 import ScrollingLogos from "@/Components/HeroSection/ScrollingLogos";
 
@@ -170,7 +169,7 @@ export default async function About() {
 
 
 
-
+      {/* section 5 */}
 
       <div className="w-full max-w-[1920px] mx-auto flex flex-col items-start justify-center  py-[50px]">
         <div className="relative h-[784px] w-full rounded-[30px] overflow-hidden">
@@ -205,54 +204,3 @@ export default async function About() {
 
 
 
-
-
-{/*         
-          <CardFamily
-            defaultCard="/AboutUs/mahmod.jpg"
-            themeCard="/AboutUs/mahmodTheme.jpg"
-            TeamName="Mahmoud Grant"
-            TeamTitle="Founder"
-          />
-          <CardFamily
-            defaultCard="/AboutUs/geta.jpg"
-            themeCard="/AboutUs/getaTheme.jpg"
-            TeamName="Guita"
-            TeamTitle="Founder"
-          />
-          <CardFamily
-            defaultCard="/AboutUs/ehab.jpg"
-            themeCard="/AboutUs/ehabTheme.jpg"
-            TeamName="Ahmed Ehab"
-            TeamTitle="Digital Marketing manager"
-          />
-          <CardFamily
-            defaultCard="/AboutUs/hadeer.jpg"
-            themeCard="/AboutUs/hadeerTheme.jpg"
-            TeamName="Hadeer "
-            TeamTitle="Video Editor"
-          />
-          <CardFamily
-            defaultCard="/AboutUs/mareez.jpg"
-            themeCard="/AboutUs/mareezTheme.jpg"
-            TeamName="Mareez "
-            TeamTitle="Graphic Designer"
-          />
-          <CardFamily
-            defaultCard="/AboutUs/haggag.jpg"
-            themeCard="/AboutUs/haggagTheme.jpg"
-            TeamName="Mohamed Haggag"
-            TeamTitle="UI/UX Designer"
-          />
-          <CardFamily
-            defaultCard="/AboutUs/mina.jpg"
-            themeCard="/AboutUs/minaTheme.jpg"
-            TeamName="Mina basta"
-            TeamTitle="social media specialist"
-          />
-          <CardFamily
-            defaultCard="/AboutUs/kareem.jpg"
-            themeCard="/AboutUs/kareemTheme.jpg"
-            TeamName="Kareem Hany"
-            TeamTitle="Social Media Specialist"
-          /> */}
