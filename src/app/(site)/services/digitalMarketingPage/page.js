@@ -71,7 +71,7 @@ export default function DigitalMarketing() {
 
         <div className=" glass glow-border absolute   rounded-full w-[70px] h-[70px] rotate-[8.78deg] top-[45%] left-[380px]   flex items-center justify-center p-2 animate-float">
           <Image
-            src="/RaceLineSuccess/Vector2.png"
+            src="/RaceLineSuccess/vector2.png"
             alt="Avatar"
             width={70}
             height={70}

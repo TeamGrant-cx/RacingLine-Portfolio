@@ -139,7 +139,7 @@ export default function RaceLineSuccess({ data }) {
 
           <div className=" bg-[#6ECCF7] absolute transition-all duration-300 ease-in-out  rounded-full w-[70px] h-[70px] rotate-[8.78deg] -top-[2%] right-[290px] group-hover:top-2 group-hover:right-[220px] overflow-hidden flex items-center justify-center p-2">
             <Image
-              src="/RaceLineSuccess/Vector2.png"
+              src="/RaceLineSuccess/vector2.png"
               alt="Avatar"
               width={70}
               height={70}
@@ -153,7 +153,7 @@ export default function RaceLineSuccess({ data }) {
             className="!absolute transition-all duration-300 ease-in-out rounded-full w-[70px] h-[70px] rotate-[8.78deg] -top-[20%] right-[150px] group-hover:top-1 overflow-hidden flex items-center justify-center p-3"
           >
             <Image
-              src="/RaceLineSuccess/Vector3.png"
+              src="/RaceLineSuccess/vector3.png"
               alt="Avatar"
               width={70}
               height={70}
@@ -166,7 +166,7 @@ export default function RaceLineSuccess({ data }) {
             className="!absolute transition-all duration-300 ease-in-out rounded-full w-[70px] h-[70px] rotate-[8.78deg] top-[0%] left-[280px] group-hover:top-2 group-hover:left-[250px] overflow-hidden flex items-center justify-center p-3"
           >
             <Image
-              src="/RaceLineSuccess/Vector4.png"
+              src="/RaceLineSuccess/vector4.png"
               alt="Avatar"
               width={70}
               height={70}
