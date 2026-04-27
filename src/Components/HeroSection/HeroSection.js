@@ -1,9 +1,11 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "@/Components/HeroSection/HeroSection.css";
 import CardCategory from "../CardCategory/CardCategory";
 import ScrollingLogos from "./ScrollingLogos";
+
+const VISIBLE_COUNT = 4;
 
 const NeonHighlight = ({ text }) => (
   <span className="neon-stack" aria-label={text}>
@@ -61,15 +63,47 @@ export default function HeroSection({ HeroData }) {
 
   ];
 
-  const maxOffset = cards.length - 4;
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const totalCards = cards.length;
+  const displayCards = [...cards, ...cards.slice(0, VISIBLE_COUNT)];
 
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? maxOffset : prev - 1));
-  };
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [enableTransition, setEnableTransition] = useState(true);
+  const isAnimatingRef = useRef(false);
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev >= maxOffset ? 0 : prev + 1));
+    if (isAnimatingRef.current) return;
+    isAnimatingRef.current = true;
+    setEnableTransition(true);
+    setCurrentIndex((prev) => prev + 1);
+  };
+
+  const handlePrev = () => {
+    if (isAnimatingRef.current) return;
+    if (currentIndex === 0) {
+      // jump instantly to the clone slot (visually identical), then animate back
+      setEnableTransition(false);
+      setCurrentIndex(totalCards);
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          isAnimatingRef.current = true;
+          setEnableTransition(true);
+          setCurrentIndex(totalCards - 1);
+        });
+      });
+    } else {
+      isAnimatingRef.current = true;
+      setEnableTransition(true);
+      setCurrentIndex((prev) => prev - 1);
+    }
+  };
+
+  const handleTransitionEnd = () => {
+    isAnimatingRef.current = false;
+    if (currentIndex >= totalCards) {
+      // we're sitting on a clone — snap back to the real index without animation
+      setEnableTransition(false);
+      setCurrentIndex(currentIndex - totalCards);
+    }
   };
 
   const ClientLogos = [
@@ -121,15 +155,19 @@ export default function HeroSection({ HeroData }) {
 
           <div className="w-[120%] p-5 bg-[#03031D] rounded-tr-[20px] rounded-br-[20px] overflow-x-clip overflow-y-visible" >
             <div
-              className=" flex transition-transform duration-700 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * 25}%)` }}
+              className=" flex"
+              style={{
+                transform: `translateX(-${currentIndex * 25}%)`,
+                transition: enableTransition ? "transform 700ms ease-in-out" : "none",
+              }}
+              onTransitionEnd={handleTransitionEnd}
             >
-              {cards.map((card, index) => (
+              {displayCards.map((card, index) => (
                 <div
                   key={index}
                   className="w-1/4 flex-shrink-0 px-2.5 transition-transform duration-400 hover:scale-110"
                 >
-                  <CardCategory  SrcPage={card.SrcPage} text={card.text} cardImage={card.cardImage} bgImage={card.bgImage} withHoverEffect={true} />
+                  <CardCategory SrcPage={card.SrcPage} text={card.text} cardImage={card.cardImage} bgImage={card.bgImage} withHoverEffect={true} />
                 </div>
               ))}
             </div>
@@ -170,10 +208,10 @@ export default function HeroSection({ HeroData }) {
         </div>
       </div>
 
-<div className="my-[5rem]">
+      <div className="my-[5rem]">
 
-      <ScrollingLogos logos={ClientLogos} />
-</div>
+        <ScrollingLogos logos={ClientLogos} />
+      </div>
     </>
   );
 }
