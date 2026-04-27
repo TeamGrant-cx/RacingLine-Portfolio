@@ -1,9 +1,9 @@
 .hero-heading {
   font-family: var(--font-montserrat);
   font-weight: 600;
-  font-size: 40px;
-  line-height: 100%;
-  letter-spacing: 0.12em;
+  font-size: clamp(24px, 2.5vw, 40px);
+  line-height: 1.15;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: transparent;
   -webkit-text-stroke: 1.5px #E7F6FE;
@@ -14,29 +14,15 @@
     0 0 80px rgba(231, 246, 254, 0.2);
 }
 
-/* ─── Neon Stack ─── */
-.neon-stack {
-  display: inline-flex;
-  flex-direction: column;
-  height: 1em; /* show only 1 row */
-  overflow: hidden;
-  vertical-align: bottom;
-  line-height: 1;
-}
-
-.neon-row {
-  font-family: var(--font-montserrat);
-  font-weight: 600;
-  font-size: 40px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+/* ─── Neon Inline ─── */
+.neon-text {
+  /* inherit font + sizing from .hero-heading so it flows as one sentence */
   color: transparent;
-  white-space: nowrap;
-  
-  /* dim by default */
+
+  /* dim by default — animation drives the flicker */
   -webkit-text-stroke: 1.5px rgba(211, 250, 209, 0.2);
   text-shadow: none;
-  
+
   animation: neonRowPulse 3s ease-in-out infinite;
 }
 

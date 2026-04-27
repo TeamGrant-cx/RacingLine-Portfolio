@@ -8,18 +8,7 @@ import ScrollingLogos from "./ScrollingLogos";
 const VISIBLE_COUNT = 4;
 
 const NeonHighlight = ({ text }) => (
-  <span className="neon-stack" aria-label={text}>
-    {[...Array(5)].map((_, i) => (
-      <span
-        key={i}
-        className="neon-row"
-        style={{ animationDelay: `${i * 0.6}s` }}
-        aria-hidden={i !== 0}
-      >
-        {text}
-      </span>
-    ))}
-  </span>
+  <span className="neon-text">{text}</span>
 );
 
 export default function HeroSection({ HeroData }) {
@@ -135,7 +124,7 @@ export default function HeroSection({ HeroData }) {
 
           <div className="p-5 bg-[#03031D]">
             <h1 className="hero-heading">
-              A Performance Driven advertising Agency on the
+              A Performance Driven advertising Agency on the{" "}
               <NeonHighlight text="Fastest Line to Growth" />
             </h1>
             <p className="text-[#D7D8DB] font-[400] text-[1.5rem]">
