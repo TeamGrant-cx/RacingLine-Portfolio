@@ -20,34 +20,34 @@ export default function HeroSection({ HeroData }) {
       bgImage: "/OurServices/ourservices4.png"
     },
     {
-      SrcPage: "/services/digitalMarketingPage",
+      SrcPage: "/services/media-production",
       text: "Media Production",
-      cardImage: "/HeroSection/printer.png",
-      bgImage: "/OurServices/ourservices4.png"
+      cardImage: "/HeroSection/camera.png",
+      bgImage: "/OurServices/ourservices1.jpg"
     },
     {
-      SrcPage: "/services/digitalMarketingPage",
+      SrcPage: "/services/web-development",
       text: "Web & App Development",
       cardImage: "/HeroSection/game.png",
-      bgImage: "/OurServices/ourservices4.png"
+      bgImage: "/OurServices/ourservices2.jpg"
     },
     {
-      SrcPage: "/services/digitalMarketingPage",
-      text: "Digital Marketing",
-      cardImage: "/HeroSection/mic.png",
-      bgImage: "/OurServices/ourservices4.png"
+      SrcPage: "/services/ai-solutions",
+      text: "AI Solutions",
+      cardImage: "/HeroSection/ai.png",
+      bgImage: "/OurServices/ourservices3.png"
     },
     {
-      SrcPage: "/services/digitalMarketingPage",
-      text: "Media Production",
-      cardImage: "/HeroSection/printer.png",
-      bgImage: "/OurServices/ourservices4.png"
+      SrcPage: "/services/social-media",
+      text: "Social Media",
+      cardImage: "/HeroSection/social.png",
+      bgImage: "/OurServices/ourservices5.jpg"
     },
     {
-      SrcPage: "/services/digitalMarketingPage",
-      text: "Web & App Development",
-      cardImage: "/HeroSection/game.png",
-      bgImage: "/OurServices/ourservices4.png"
+      SrcPage: "/services/retail-activation",
+      text: "Retail Activation",
+      cardImage: "/HeroSection/supermarket.png",
+      bgImage: "/OurServices/ourservices6.jpg"
     },
 
   ];
