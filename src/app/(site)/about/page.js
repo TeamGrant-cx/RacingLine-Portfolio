@@ -5,6 +5,7 @@ import "@/app/(site)/about/about.css";
 import Link from "next/link";
 import GlassButton from "@/Components/GlassButton/GlassButton";
 import ScrollingLogos from "@/Components/HeroSection/ScrollingLogos";
+import CardAbout from "@/Components/CardAbout/CardAbout";
 
 export default async function About() {
   const ClientLogos = [
@@ -140,6 +141,22 @@ export default async function About() {
           <p className="text-[#C9CACF] tet-[1.5rem] font-[400] text-center ">
             We combine strategy, creativity, and performance under one roof, helping brands move faster, scale smarter, and turn marketing into measurable results.        </p>
         </div>
+
+
+        <div className="grid grid-cols-3 gap-[1.5rem] py-[4rem] ">
+          <CardAbout
+            title="Less Than 24 Hours"
+            description="Data-backed thinking that defines the right direction before execution."
+          />
+          <CardAbout
+            title="Creative"
+            description="Content and campaigns designed to capture attention and convert."
+          />
+          <CardAbout
+            title="Performance"
+            description="Continuous optimization focused on real, measurable business outcomes."
+          />
+        </div>
       </div>
 
       {/* section 4 */}
@@ -165,6 +182,8 @@ export default async function About() {
           Racing Line was founded with a focus on execution-driven marketing delivering campaigns, events, and strategies that create real impact. As client needs expanded, so did the agency’s capabilities, growing into a full-service operation covering digital marketing, media production, technology, and brand activations.
           Today, Racing Line partners with businesses to deliver integrated marketing solutions designed for performance, scalability, and measurable growth.
         </p>
+
+
       </div>
 
 

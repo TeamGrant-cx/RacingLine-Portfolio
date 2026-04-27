@@ -5,6 +5,7 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { glassBackdrop } from "@/Components/LiquidGlassEffect/glassStyle";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -121,6 +122,7 @@ export default function Navbar() {
                 <div
                   className="glass"
                   style={{
+                    ...glassBackdrop,
                     position: "absolute",
                     top: "calc(100% + 10px)",
                     left: 0,
@@ -128,8 +130,6 @@ export default function Navbar() {
                     width: 293,
                     border: "3px solid rgba(119, 189, 116, 1)",
                     borderRadius: "20px",
-                    backdropFilter: "brightness(1.05) blur(8px) saturate(1.4) url(#frosted)",
-                    WebkitBackdropFilter: "brightness(1.05) blur(8px) saturate(1.4) url(#frosted)",
                   }}
                   onMouseEnter={() => handleMouseEnter(item.label)}
                   onMouseLeave={handleMouseLeave}
